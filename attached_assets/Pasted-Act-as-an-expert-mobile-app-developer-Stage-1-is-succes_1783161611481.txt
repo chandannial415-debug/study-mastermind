@@ -1,0 +1,24 @@
+Act as an expert mobile app developer. Stage 1 is successfully completed. Now, let's build Stage 2 of our app, officially named "Study Mindset" (A Class 10 Matric Syllabus & Notes app using React Native Expo).
+
+Please complete the following tasks for Stage 2:
+
+1. Create the Second Half of the Folder Structure:
+   - src/data/
+   - src/navigation/
+   - src/styles/
+
+2. Create the Database File (`src/data/syllabus.json`):
+   Populate this file with the complete locked syllabus database for "Study Mindset". Structure it with categories: "Regular", "Third Language", and "Vocational (Class 10 Only)". 
+   Include all 18 sections we locked earlier (Odia 18 ch, Odia Grammar 7 ch, Algebra 8 ch, Geometry 7 ch, Physical Science 9 ch, Life Science 11 ch, English 15 ch, English Grammar 10 ch, History 8 ch, Geography 19 ch, Hindi 11 ch, Hindi Grammar 12 ch, Sanskrit Literature 16 ch, Sanskrit Grammar 13 ch, and the 4 Class 10 Vocational subjects: IT 7 ch, Retail 5 ch, Automobile 5 ch, Tourism & Hospitality 5 ch). Absolutely NO Class 9 content.
+
+3. Implement the Core Download, Ad, and Offline Storage Logic:
+   - In `src/screens/ChapterScreen.js`, use a state management mechanism (like React Context or AsyncStorage mock) to track whether a chapter's PDF is downloaded (`isDownloaded: false` by default).
+   - Simulate a network connectivity check state (Online/Offline).
+   - If ONLINE: Clicking the Blue Download Button or the Chapter Folder triggers a full-screen Modal simulating a Rewarded Ad ("Watching Ad to unlock... 5, 4, 3, 2, 1"). Once completed, set `isDownloaded: true` and save this state locally.
+   - If OFFLINE: If `isDownloaded` is true, allow the user to open and read the placeholder PDF content screen directly without internet and without ads. If `isDownloaded` is false, show an alert: "You are offline. Please connect to the internet once to watch an ad and download this chapter."
+
+4. Setup Gaming Mode Screen Logic:
+   - Create a basic placeholder screen for Gaming/Quiz Revision Mode.
+   - If the app state is OFFLINE, block this screen completely and overlay a message: "Internet required for Gaming Mode."
+
+Ensure all file paths are correctly linked under the "Study Mindset" app architecture, navigation hooks are properly implemented, and code is clean and modular.

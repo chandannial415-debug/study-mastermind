@@ -1,0 +1,387 @@
+{
+  "meta": {
+    "app": "Study Mindset",
+    "board": "Board of Secondary Education (BSE), Odisha",
+    "class": 10,
+    "version": "2.0.0",
+    "note": "Strictly Class 10 content only. No Class 9 content included."
+  },
+  "categories": [
+    {
+      "id": "regular",
+      "name": "Regular Courses",
+      "subtitle": "Core subjects for Matric Class 10",
+      "iconName": "school-outline",
+      "color": "#1565C0",
+      "lightBg": "#E3F2FD"
+    },
+    {
+      "id": "third-language",
+      "name": "Third Language",
+      "subtitle": "Language electives & literature",
+      "iconName": "language-outline",
+      "color": "#6A1B9A",
+      "lightBg": "#F3E5F5"
+    },
+    {
+      "id": "vocational",
+      "name": "Vocational Courses",
+      "subtitle": "Class 10 Only — Skill-based learning",
+      "iconName": "construct-outline",
+      "color": "#E65100",
+      "lightBg": "#FBE9E7"
+    }
+  ],
+  "subjects": [
+    {
+      "id": "odia",
+      "name": "Odia (1st Language)",
+      "iconName": "book-outline",
+      "categoryId": "regular",
+      "totalChapters": 18
+    },
+    {
+      "id": "odia-grammar",
+      "name": "Odia Grammar",
+      "iconName": "pencil-outline",
+      "categoryId": "regular",
+      "totalChapters": 7
+    },
+    {
+      "id": "algebra",
+      "name": "Algebra",
+      "iconName": "calculator-outline",
+      "categoryId": "regular",
+      "totalChapters": 8
+    },
+    {
+      "id": "geometry",
+      "name": "Geometry",
+      "iconName": "triangle-outline",
+      "categoryId": "regular",
+      "totalChapters": 7
+    },
+    {
+      "id": "physical-science",
+      "name": "Physical Science",
+      "iconName": "flask-outline",
+      "categoryId": "regular",
+      "totalChapters": 9
+    },
+    {
+      "id": "life-science",
+      "name": "Life Science",
+      "iconName": "leaf-outline",
+      "categoryId": "regular",
+      "totalChapters": 11
+    },
+    {
+      "id": "english",
+      "name": "English (1st Language)",
+      "iconName": "document-text-outline",
+      "categoryId": "regular",
+      "totalChapters": 15
+    },
+    {
+      "id": "english-grammar",
+      "name": "English Grammar",
+      "iconName": "create-outline",
+      "categoryId": "regular",
+      "totalChapters": 10
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "iconName": "time-outline",
+      "categoryId": "regular",
+      "totalChapters": 8
+    },
+    {
+      "id": "geography",
+      "name": "Geography",
+      "iconName": "earth-outline",
+      "categoryId": "regular",
+      "totalChapters": 19
+    },
+    {
+      "id": "hindi",
+      "name": "Hindi",
+      "iconName": "text-outline",
+      "categoryId": "third-language",
+      "totalChapters": 11
+    },
+    {
+      "id": "hindi-grammar",
+      "name": "Hindi Grammar",
+      "iconName": "pencil-outline",
+      "categoryId": "third-language",
+      "totalChapters": 12
+    },
+    {
+      "id": "sanskrit-lit",
+      "name": "Sanskrit Literature",
+      "iconName": "library-outline",
+      "categoryId": "third-language",
+      "totalChapters": 16
+    },
+    {
+      "id": "sanskrit-grammar",
+      "name": "Sanskrit Grammar",
+      "iconName": "create-outline",
+      "categoryId": "third-language",
+      "totalChapters": 13
+    },
+    {
+      "id": "voc-it",
+      "name": "Information Technology",
+      "iconName": "desktop-outline",
+      "categoryId": "vocational",
+      "totalChapters": 7
+    },
+    {
+      "id": "voc-retail",
+      "name": "Retail",
+      "iconName": "storefront-outline",
+      "categoryId": "vocational",
+      "totalChapters": 5
+    },
+    {
+      "id": "voc-auto",
+      "name": "Automobile",
+      "iconName": "car-outline",
+      "categoryId": "vocational",
+      "totalChapters": 5
+    },
+    {
+      "id": "voc-tourism",
+      "name": "Tourism & Hospitality",
+      "iconName": "airplane-outline",
+      "categoryId": "vocational",
+      "totalChapters": 5
+    }
+  ],
+  "chapters": {
+    "odia": [
+      { "id": "odia-1",  "name": "Mo Bhuin Mo Gram (My Land My Village)",         "subjectId": "odia", "pdfUrl": "placeholder://odia-ch1.pdf" },
+      { "id": "odia-2",  "name": "Tuma Pada Tala (At Your Feet)",                  "subjectId": "odia", "pdfUrl": "placeholder://odia-ch2.pdf" },
+      { "id": "odia-3",  "name": "Sandhya Ra Swar (Evening Voice)",                "subjectId": "odia", "pdfUrl": "placeholder://odia-ch3.pdf" },
+      { "id": "odia-4",  "name": "Kabi O Kabita (Poet and Poetry)",                "subjectId": "odia", "pdfUrl": "placeholder://odia-ch4.pdf" },
+      { "id": "odia-5",  "name": "Satara Ra Shishu (Children of Independence)",    "subjectId": "odia", "pdfUrl": "placeholder://odia-ch5.pdf" },
+      { "id": "odia-6",  "name": "Mamu Ra Girija (Uncle's Girija)",                "subjectId": "odia", "pdfUrl": "placeholder://odia-ch6.pdf" },
+      { "id": "odia-7",  "name": "Desara Mati (Soil of the Country)",              "subjectId": "odia", "pdfUrl": "placeholder://odia-ch7.pdf" },
+      { "id": "odia-8",  "name": "Nua Kabi Nua Swar (New Poet New Voice)",         "subjectId": "odia", "pdfUrl": "placeholder://odia-ch8.pdf" },
+      { "id": "odia-9",  "name": "Ama Odisha (Our Odisha)",                         "subjectId": "odia", "pdfUrl": "placeholder://odia-ch9.pdf" },
+      { "id": "odia-10", "name": "Manisha Ra Sapna (Human Dreams)",                "subjectId": "odia", "pdfUrl": "placeholder://odia-ch10.pdf" },
+      { "id": "odia-11", "name": "Prathama Prayas (First Attempt)",                "subjectId": "odia", "pdfUrl": "placeholder://odia-ch11.pdf" },
+      { "id": "odia-12", "name": "Gita Ra Path (Lessons from Gita)",               "subjectId": "odia", "pdfUrl": "placeholder://odia-ch12.pdf" },
+      { "id": "odia-13", "name": "Jeevan Ra Artha (Meaning of Life)",              "subjectId": "odia", "pdfUrl": "placeholder://odia-ch13.pdf" },
+      { "id": "odia-14", "name": "Balaka Ra Prati (To the Child)",                 "subjectId": "odia", "pdfUrl": "placeholder://odia-ch14.pdf" },
+      { "id": "odia-15", "name": "Nari Shakti (Women's Power)",                    "subjectId": "odia", "pdfUrl": "placeholder://odia-ch15.pdf" },
+      { "id": "odia-16", "name": "Paribarana Raksha (Environmental Protection)",   "subjectId": "odia", "pdfUrl": "placeholder://odia-ch16.pdf" },
+      { "id": "odia-17", "name": "Swadhina Bharata (Independent India)",           "subjectId": "odia", "pdfUrl": "placeholder://odia-ch17.pdf" },
+      { "id": "odia-18", "name": "Odishara Samskruti (Culture of Odisha)",         "subjectId": "odia", "pdfUrl": "placeholder://odia-ch18.pdf" }
+    ],
+    "odia-grammar": [
+      { "id": "odia-gr-1", "name": "Shabda Bibhakti (Case Endings)",               "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch1.pdf" },
+      { "id": "odia-gr-2", "name": "Kriya Pada (Verb Forms)",                      "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch2.pdf" },
+      { "id": "odia-gr-3", "name": "Kala O Karakas (Tense and Cases)",             "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch3.pdf" },
+      { "id": "odia-gr-4", "name": "Samaas (Compound Words)",                      "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch4.pdf" },
+      { "id": "odia-gr-5", "name": "Sandhi (Euphonic Combinations)",               "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch5.pdf" },
+      { "id": "odia-gr-6", "name": "Alankara (Figures of Speech)",                 "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch6.pdf" },
+      { "id": "odia-gr-7", "name": "Patra Lekhan (Letter Writing)",                "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch7.pdf" }
+    ],
+    "algebra": [
+      { "id": "alg-1", "name": "Chapter 1: Real Numbers and Surds",                "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch1.pdf" },
+      { "id": "alg-2", "name": "Chapter 2: Polynomials",                           "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch2.pdf" },
+      { "id": "alg-3", "name": "Chapter 3: Linear Equations in Two Variables",     "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch3.pdf" },
+      { "id": "alg-4", "name": "Chapter 4: Pair of Linear Equations",              "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch4.pdf" },
+      { "id": "alg-5", "name": "Chapter 5: Quadratic Equations",                   "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch5.pdf" },
+      { "id": "alg-6", "name": "Chapter 6: Arithmetic Progressions",               "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch6.pdf" },
+      { "id": "alg-7", "name": "Chapter 7: Statistics",                            "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch7.pdf" },
+      { "id": "alg-8", "name": "Chapter 8: Probability",                           "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch8.pdf" }
+    ],
+    "geometry": [
+      { "id": "geo-1", "name": "Chapter 1: Similar Triangles",                     "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch1.pdf" },
+      { "id": "geo-2", "name": "Chapter 2: Circles and Tangents",                  "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch2.pdf" },
+      { "id": "geo-3", "name": "Chapter 3: Constructions",                         "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch3.pdf" },
+      { "id": "geo-4", "name": "Chapter 4: Coordinate Geometry",                   "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch4.pdf" },
+      { "id": "geo-5", "name": "Chapter 5: Introduction to Trigonometry",          "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch5.pdf" },
+      { "id": "geo-6", "name": "Chapter 6: Heights and Distances",                 "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch6.pdf" },
+      { "id": "geo-7", "name": "Chapter 7: Areas and Volumes (Mensuration)",       "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch7.pdf" }
+    ],
+    "physical-science": [
+      { "id": "phy-1",  "name": "Chapter 1: Chemical Reactions and Equations",     "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch1.pdf" },
+      { "id": "phy-2",  "name": "Chapter 2: Acids, Bases and Salts",               "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch2.pdf" },
+      { "id": "phy-3",  "name": "Chapter 3: Metals and Non-Metals",                "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch3.pdf" },
+      { "id": "phy-4",  "name": "Chapter 4: Carbon and Its Compounds",             "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch4.pdf" },
+      { "id": "phy-5",  "name": "Chapter 5: Periodic Classification of Elements",  "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch5.pdf" },
+      { "id": "phy-6",  "name": "Chapter 6: Light — Reflection and Refraction",    "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch6.pdf" },
+      { "id": "phy-7",  "name": "Chapter 7: Human Eye and Colourful World",        "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch7.pdf" },
+      { "id": "phy-8",  "name": "Chapter 8: Electricity and Its Effects",          "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch8.pdf" },
+      { "id": "phy-9",  "name": "Chapter 9: Magnetic Effects of Electric Current", "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch9.pdf" }
+    ],
+    "life-science": [
+      { "id": "ls-1",  "name": "Chapter 1: Life Processes",                        "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch1.pdf" },
+      { "id": "ls-2",  "name": "Chapter 2: Control and Coordination",              "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch2.pdf" },
+      { "id": "ls-3",  "name": "Chapter 3: Reproduction in Organisms",             "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch3.pdf" },
+      { "id": "ls-4",  "name": "Chapter 4: Heredity and Evolution",                "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch4.pdf" },
+      { "id": "ls-5",  "name": "Chapter 5: Our Environment",                       "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch5.pdf" },
+      { "id": "ls-6",  "name": "Chapter 6: Natural Resources and Conservation",    "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch6.pdf" },
+      { "id": "ls-7",  "name": "Chapter 7: Cell Biology",                          "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch7.pdf" },
+      { "id": "ls-8",  "name": "Chapter 8: Nutrition in Plants and Animals",       "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch8.pdf" },
+      { "id": "ls-9",  "name": "Chapter 9: Respiration and Excretion",             "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch9.pdf" },
+      { "id": "ls-10", "name": "Chapter 10: Ecosystem and Biodiversity",           "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch10.pdf" },
+      { "id": "ls-11", "name": "Chapter 11: Human Health and Disease",             "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch11.pdf" }
+    ],
+    "english": [
+      { "id": "eng-1",  "name": "Chapter 1: A Letter to God",                      "subjectId": "english", "pdfUrl": "placeholder://eng-ch1.pdf" },
+      { "id": "eng-2",  "name": "Chapter 2: Nelson Mandela — Long Walk to Freedom","subjectId": "english", "pdfUrl": "placeholder://eng-ch2.pdf" },
+      { "id": "eng-3",  "name": "Chapter 3: Two Stories About Flying",             "subjectId": "english", "pdfUrl": "placeholder://eng-ch3.pdf" },
+      { "id": "eng-4",  "name": "Chapter 4: From the Diary of Anne Frank",         "subjectId": "english", "pdfUrl": "placeholder://eng-ch4.pdf" },
+      { "id": "eng-5",  "name": "Chapter 5: The Hundred Dresses — I",              "subjectId": "english", "pdfUrl": "placeholder://eng-ch5.pdf" },
+      { "id": "eng-6",  "name": "Chapter 6: The Hundred Dresses — II",             "subjectId": "english", "pdfUrl": "placeholder://eng-ch6.pdf" },
+      { "id": "eng-7",  "name": "Chapter 7: Glimpses of India",                    "subjectId": "english", "pdfUrl": "placeholder://eng-ch7.pdf" },
+      { "id": "eng-8",  "name": "Chapter 8: Mijbil the Otter",                     "subjectId": "english", "pdfUrl": "placeholder://eng-ch8.pdf" },
+      { "id": "eng-9",  "name": "Chapter 9: Madam Rides the Bus",                  "subjectId": "english", "pdfUrl": "placeholder://eng-ch9.pdf" },
+      { "id": "eng-10", "name": "Chapter 10: The Sermon at Benares",               "subjectId": "english", "pdfUrl": "placeholder://eng-ch10.pdf" },
+      { "id": "eng-11", "name": "Chapter 11: The Proposal (Play)",                 "subjectId": "english", "pdfUrl": "placeholder://eng-ch11.pdf" },
+      { "id": "eng-12", "name": "Chapter 12: A Triumph of Surgery",                "subjectId": "english", "pdfUrl": "placeholder://eng-ch12.pdf" },
+      { "id": "eng-13", "name": "Chapter 13: The Thief's Story",                   "subjectId": "english", "pdfUrl": "placeholder://eng-ch13.pdf" },
+      { "id": "eng-14", "name": "Chapter 14: The Midnight Visitor",                "subjectId": "english", "pdfUrl": "placeholder://eng-ch14.pdf" },
+      { "id": "eng-15", "name": "Chapter 15: A Question of Trust",                 "subjectId": "english", "pdfUrl": "placeholder://eng-ch15.pdf" }
+    ],
+    "english-grammar": [
+      { "id": "eng-gr-1",  "name": "Unit 1: Parts of Speech",                      "subjectId": "english-grammar", "pdfUrl": "placeholder://eng-gr-ch1.pdf" },
+      { "id": "eng-gr-2",  "name": "Unit 2: Tenses (All Forms)",                   "subjectId": "english-grammar", "pdfUrl": "placeholder://eng-gr-ch2.pdf" },
+      { "id": "eng-gr-3",  "name": "Unit 3: Voice — Active and Passive",           "subjectId": "english-grammar", "pdfUrl": "placeholder://eng-gr-ch3.pdf" },
+      { "id": "eng-gr-4",  "name": "Unit 4: Narration — Direct and Indirect",      "subjectId": "english-grammar", "pdfUrl": "placeholder://eng-gr-ch4.pdf" },
+      { "id": "eng-gr-5",  "name": "Unit 5: Modals and Auxiliaries",               "subjectId": "english-grammar", "pdfUrl": "placeholder://eng-gr-ch5.pdf" },
+      { "id": "eng-gr-6",  "name": "Unit 6: Articles and Prepositions",            "subjectId": "english-grammar", "pdfUrl": "placeholder://eng-gr-ch6.pdf" },
+      { "id": "eng-gr-7",  "name": "Unit 7: Clauses and Phrases",                  "subjectId": "english-grammar", "pdfUrl": "placeholder://eng-gr-ch7.pdf" },
+      { "id": "eng-gr-8",  "name": "Unit 8: Transformation of Sentences",          "subjectId": "english-grammar", "pdfUrl": "placeholder://eng-gr-ch8.pdf" },
+      { "id": "eng-gr-9",  "name": "Unit 9: Letter and Email Writing",             "subjectId": "english-grammar", "pdfUrl": "placeholder://eng-gr-ch9.pdf" },
+      { "id": "eng-gr-10", "name": "Unit 10: Paragraph and Essay Writing",         "subjectId": "english-grammar", "pdfUrl": "placeholder://eng-gr-ch10.pdf" }
+    ],
+    "history": [
+      { "id": "hist-1", "name": "Chapter 1: The Rise of Nationalism in Europe",    "subjectId": "history", "pdfUrl": "placeholder://hist-ch1.pdf" },
+      { "id": "hist-2", "name": "Chapter 2: Nationalism in India",                 "subjectId": "history", "pdfUrl": "placeholder://hist-ch2.pdf" },
+      { "id": "hist-3", "name": "Chapter 3: The Making of a Global World",         "subjectId": "history", "pdfUrl": "placeholder://hist-ch3.pdf" },
+      { "id": "hist-4", "name": "Chapter 4: The Age of Industrialisation",         "subjectId": "history", "pdfUrl": "placeholder://hist-ch4.pdf" },
+      { "id": "hist-5", "name": "Chapter 5: Print Culture and the Modern World",   "subjectId": "history", "pdfUrl": "placeholder://hist-ch5.pdf" },
+      { "id": "hist-6", "name": "Chapter 6: Rise of Communism — Russian Revolution","subjectId": "history", "pdfUrl": "placeholder://hist-ch6.pdf" },
+      { "id": "hist-7", "name": "Chapter 7: World War II and Its Aftermath",       "subjectId": "history", "pdfUrl": "placeholder://hist-ch7.pdf" },
+      { "id": "hist-8", "name": "Chapter 8: India After Independence",             "subjectId": "history", "pdfUrl": "placeholder://hist-ch8.pdf" }
+    ],
+    "geography": [
+      { "id": "geog-1",  "name": "Chapter 1: Resources and Development",           "subjectId": "geography", "pdfUrl": "placeholder://geog-ch1.pdf" },
+      { "id": "geog-2",  "name": "Chapter 2: Forest and Wildlife Resources",       "subjectId": "geography", "pdfUrl": "placeholder://geog-ch2.pdf" },
+      { "id": "geog-3",  "name": "Chapter 3: Water Resources",                     "subjectId": "geography", "pdfUrl": "placeholder://geog-ch3.pdf" },
+      { "id": "geog-4",  "name": "Chapter 4: Agriculture in India",                "subjectId": "geography", "pdfUrl": "placeholder://geog-ch4.pdf" },
+      { "id": "geog-5",  "name": "Chapter 5: Minerals and Energy Resources",       "subjectId": "geography", "pdfUrl": "placeholder://geog-ch5.pdf" },
+      { "id": "geog-6",  "name": "Chapter 6: Manufacturing Industries",            "subjectId": "geography", "pdfUrl": "placeholder://geog-ch6.pdf" },
+      { "id": "geog-7",  "name": "Chapter 7: Lifelines of National Economy",       "subjectId": "geography", "pdfUrl": "placeholder://geog-ch7.pdf" },
+      { "id": "geog-8",  "name": "Chapter 8: Population Distribution",             "subjectId": "geography", "pdfUrl": "placeholder://geog-ch8.pdf" },
+      { "id": "geog-9",  "name": "Chapter 9: Climate of India",                    "subjectId": "geography", "pdfUrl": "placeholder://geog-ch9.pdf" },
+      { "id": "geog-10", "name": "Chapter 10: Drainage of India",                  "subjectId": "geography", "pdfUrl": "placeholder://geog-ch10.pdf" },
+      { "id": "geog-11", "name": "Chapter 11: Physical Features of India",         "subjectId": "geography", "pdfUrl": "placeholder://geog-ch11.pdf" },
+      { "id": "geog-12", "name": "Chapter 12: Soils of India",                     "subjectId": "geography", "pdfUrl": "placeholder://geog-ch12.pdf" },
+      { "id": "geog-13", "name": "Chapter 13: Natural Vegetation of India",        "subjectId": "geography", "pdfUrl": "placeholder://geog-ch13.pdf" },
+      { "id": "geog-14", "name": "Chapter 14: Land Use and Land Cover",            "subjectId": "geography", "pdfUrl": "placeholder://geog-ch14.pdf" },
+      { "id": "geog-15", "name": "Chapter 15: Disaster Management",                "subjectId": "geography", "pdfUrl": "placeholder://geog-ch15.pdf" },
+      { "id": "geog-16", "name": "Chapter 16: Odisha — Physical Features",         "subjectId": "geography", "pdfUrl": "placeholder://geog-ch16.pdf" },
+      { "id": "geog-17", "name": "Chapter 17: Odisha — Climate and Drainage",      "subjectId": "geography", "pdfUrl": "placeholder://geog-ch17.pdf" },
+      { "id": "geog-18", "name": "Chapter 18: Odisha — Agriculture and Economy",   "subjectId": "geography", "pdfUrl": "placeholder://geog-ch18.pdf" },
+      { "id": "geog-19", "name": "Chapter 19: Odisha — Industries and Transport",  "subjectId": "geography", "pdfUrl": "placeholder://geog-ch19.pdf" }
+    ],
+    "hindi": [
+      { "id": "hin-1",  "name": "Chapter 1: Sakhiyan Aur Sabad (Kabir)",           "subjectId": "hindi", "pdfUrl": "placeholder://hin-ch1.pdf" },
+      { "id": "hin-2",  "name": "Chapter 2: Ram Lakshman Parashuram Samvad",       "subjectId": "hindi", "pdfUrl": "placeholder://hin-ch2.pdf" },
+      { "id": "hin-3",  "name": "Chapter 3: Ek Kahani Yeh Bhi (Mannu Bhandari)",   "subjectId": "hindi", "pdfUrl": "placeholder://hin-ch3.pdf" },
+      { "id": "hin-4",  "name": "Chapter 4: Netaji Ka Chasma (Swayam Prakash)",    "subjectId": "hindi", "pdfUrl": "placeholder://hin-ch4.pdf" },
+      { "id": "hin-5",  "name": "Chapter 5: Balgobin Bhagat (Ramvriksha Benipuri)","subjectId": "hindi", "pdfUrl": "placeholder://hin-ch5.pdf" },
+      { "id": "hin-6",  "name": "Chapter 6: Lakhnavi Andaaz (Yashpal)",            "subjectId": "hindi", "pdfUrl": "placeholder://hin-ch6.pdf" },
+      { "id": "hin-7",  "name": "Chapter 7: Manviya Karuna Ki Divya Chamak",       "subjectId": "hindi", "pdfUrl": "placeholder://hin-ch7.pdf" },
+      { "id": "hin-8",  "name": "Chapter 8: Striyon Ki Sthiti",                    "subjectId": "hindi", "pdfUrl": "placeholder://hin-ch8.pdf" },
+      { "id": "hin-9",  "name": "Chapter 9: Sangatkar (Manglesh Dabral)",          "subjectId": "hindi", "pdfUrl": "placeholder://hin-ch9.pdf" },
+      { "id": "hin-10", "name": "Chapter 10: Maa Ka Aanchal",                      "subjectId": "hindi", "pdfUrl": "placeholder://hin-ch10.pdf" },
+      { "id": "hin-11", "name": "Chapter 11: Sapno Ke Se Din",                     "subjectId": "hindi", "pdfUrl": "placeholder://hin-ch11.pdf" }
+    ],
+    "hindi-grammar": [
+      { "id": "hin-gr-1",  "name": "Unit 1: Sandhi Aur Sandhi Viched",             "subjectId": "hindi-grammar", "pdfUrl": "placeholder://hin-gr-ch1.pdf" },
+      { "id": "hin-gr-2",  "name": "Unit 2: Samas (Compound Words)",               "subjectId": "hindi-grammar", "pdfUrl": "placeholder://hin-gr-ch2.pdf" },
+      { "id": "hin-gr-3",  "name": "Unit 3: Upsarg Aur Pratyay",                   "subjectId": "hindi-grammar", "pdfUrl": "placeholder://hin-gr-ch3.pdf" },
+      { "id": "hin-gr-4",  "name": "Unit 4: Vachan Aur Ling",                      "subjectId": "hindi-grammar", "pdfUrl": "placeholder://hin-gr-ch4.pdf" },
+      { "id": "hin-gr-5",  "name": "Unit 5: Kaarak (Cases)",                       "subjectId": "hindi-grammar", "pdfUrl": "placeholder://hin-gr-ch5.pdf" },
+      { "id": "hin-gr-6",  "name": "Unit 6: Kriya Ke Bhed (Verb Types)",           "subjectId": "hindi-grammar", "pdfUrl": "placeholder://hin-gr-ch6.pdf" },
+      { "id": "hin-gr-7",  "name": "Unit 7: Visheshan Aur Kriya Visheshan",        "subjectId": "hindi-grammar", "pdfUrl": "placeholder://hin-gr-ch7.pdf" },
+      { "id": "hin-gr-8",  "name": "Unit 8: Vaky Bhed (Sentence Types)",           "subjectId": "hindi-grammar", "pdfUrl": "placeholder://hin-gr-ch8.pdf" },
+      { "id": "hin-gr-9",  "name": "Unit 9: Muhavare Aur Lokoktiya",               "subjectId": "hindi-grammar", "pdfUrl": "placeholder://hin-gr-ch9.pdf" },
+      { "id": "hin-gr-10", "name": "Unit 10: Patra Lekhan (Letter Writing)",       "subjectId": "hindi-grammar", "pdfUrl": "placeholder://hin-gr-ch10.pdf" },
+      { "id": "hin-gr-11", "name": "Unit 11: Nibandh Lekhan (Essay Writing)",      "subjectId": "hindi-grammar", "pdfUrl": "placeholder://hin-gr-ch11.pdf" },
+      { "id": "hin-gr-12", "name": "Unit 12: Apathit Gadyansh (Unseen Passage)",   "subjectId": "hindi-grammar", "pdfUrl": "placeholder://hin-gr-ch12.pdf" }
+    ],
+    "sanskrit-lit": [
+      { "id": "skt-1",  "name": "Chapter 1: Mangalacharan (Invocation Verses)",    "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch1.pdf" },
+      { "id": "skt-2",  "name": "Chapter 2: Niti Shatakam (Ethical Verses)",       "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch2.pdf" },
+      { "id": "skt-3",  "name": "Chapter 3: Panchatantra — Selected Stories",      "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch3.pdf" },
+      { "id": "skt-4",  "name": "Chapter 4: Hitopadesha (Friendly Advice)",        "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch4.pdf" },
+      { "id": "skt-5",  "name": "Chapter 5: Meghadootam — Kalidasa",               "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch5.pdf" },
+      { "id": "skt-6",  "name": "Chapter 6: Raghuvamsham — Kalidasa",              "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch6.pdf" },
+      { "id": "skt-7",  "name": "Chapter 7: Abhijnana Shakuntalam — Kalidasa",     "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch7.pdf" },
+      { "id": "skt-8",  "name": "Chapter 8: Mricchakatika (The Little Clay Cart)", "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch8.pdf" },
+      { "id": "skt-9",  "name": "Chapter 9: Arthashastra — Chanakya",              "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch9.pdf" },
+      { "id": "skt-10", "name": "Chapter 10: Bhagavad Gita — Chapter 2",           "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch10.pdf" },
+      { "id": "skt-11", "name": "Chapter 11: Ramayana — Sundarkand Excerpts",      "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch11.pdf" },
+      { "id": "skt-12", "name": "Chapter 12: Vishnu Purana — Selected Passages",   "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch12.pdf" },
+      { "id": "skt-13", "name": "Chapter 13: Mudrarakshasa — Vishakhadatta",       "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch13.pdf" },
+      { "id": "skt-14", "name": "Chapter 14: Ratnavali — Harsha",                  "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch14.pdf" },
+      { "id": "skt-15", "name": "Chapter 15: Kadambari — Banabhatta",              "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch15.pdf" },
+      { "id": "skt-16", "name": "Chapter 16: Swapnavasavadatta — Bhasa",           "subjectId": "sanskrit-lit", "pdfUrl": "placeholder://skt-ch16.pdf" }
+    ],
+    "sanskrit-grammar": [
+      { "id": "skt-gr-1",  "name": "Unit 1: Swar Sandhi",                          "subjectId": "sanskrit-grammar", "pdfUrl": "placeholder://skt-gr-ch1.pdf" },
+      { "id": "skt-gr-2",  "name": "Unit 2: Vyanjan Sandhi",                       "subjectId": "sanskrit-grammar", "pdfUrl": "placeholder://skt-gr-ch2.pdf" },
+      { "id": "skt-gr-3",  "name": "Unit 3: Samas Prakarana (Compound Words)",     "subjectId": "sanskrit-grammar", "pdfUrl": "placeholder://skt-gr-ch3.pdf" },
+      { "id": "skt-gr-4",  "name": "Unit 4: Karak Vibhakti (Cases)",               "subjectId": "sanskrit-grammar", "pdfUrl": "placeholder://skt-gr-ch4.pdf" },
+      { "id": "skt-gr-5",  "name": "Unit 5: Shabda Roop — Nouns",                  "subjectId": "sanskrit-grammar", "pdfUrl": "placeholder://skt-gr-ch5.pdf" },
+      { "id": "skt-gr-6",  "name": "Unit 6: Dhatu Roop — Verb Forms",              "subjectId": "sanskrit-grammar", "pdfUrl": "placeholder://skt-gr-ch6.pdf" },
+      { "id": "skt-gr-7",  "name": "Unit 7: Lakar Prakarana (Tenses)",             "subjectId": "sanskrit-grammar", "pdfUrl": "placeholder://skt-gr-ch7.pdf" },
+      { "id": "skt-gr-8",  "name": "Unit 8: Vachya Prakarana (Voice)",             "subjectId": "sanskrit-grammar", "pdfUrl": "placeholder://skt-gr-ch8.pdf" },
+      { "id": "skt-gr-9",  "name": "Unit 9: Pratyaya (Suffixes)",                  "subjectId": "sanskrit-grammar", "pdfUrl": "placeholder://skt-gr-ch9.pdf" },
+      { "id": "skt-gr-10", "name": "Unit 10: Upsarg (Prefixes)",                   "subjectId": "sanskrit-grammar", "pdfUrl": "placeholder://skt-gr-ch10.pdf" },
+      { "id": "skt-gr-11", "name": "Unit 11: Avyaya (Indeclinables)",              "subjectId": "sanskrit-grammar", "pdfUrl": "placeholder://skt-gr-ch11.pdf" },
+      { "id": "skt-gr-12", "name": "Unit 12: Anuvaad (Translation Sanskrit↔Hindi)","subjectId": "sanskrit-grammar", "pdfUrl": "placeholder://skt-gr-ch12.pdf" },
+      { "id": "skt-gr-13", "name": "Unit 13: Patra Lekhan (Letter Writing)",       "subjectId": "sanskrit-grammar", "pdfUrl": "placeholder://skt-gr-ch13.pdf" }
+    ],
+    "voc-it": [
+      { "id": "vit-1", "name": "Unit 1: Digital Literacy and Internet Safety",      "subjectId": "voc-it", "pdfUrl": "placeholder://vit-ch1.pdf" },
+      { "id": "vit-2", "name": "Unit 2: Word Processing with LibreOffice Writer",   "subjectId": "voc-it", "pdfUrl": "placeholder://vit-ch2.pdf" },
+      { "id": "vit-3", "name": "Unit 3: Spreadsheets with LibreOffice Calc",        "subjectId": "voc-it", "pdfUrl": "placeholder://vit-ch3.pdf" },
+      { "id": "vit-4", "name": "Unit 4: Presentations with LibreOffice Impress",    "subjectId": "voc-it", "pdfUrl": "placeholder://vit-ch4.pdf" },
+      { "id": "vit-5", "name": "Unit 5: Introduction to Databases",                 "subjectId": "voc-it", "pdfUrl": "placeholder://vit-ch5.pdf" },
+      { "id": "vit-6", "name": "Unit 6: Cybersecurity and Digital Hygiene",         "subjectId": "voc-it", "pdfUrl": "placeholder://vit-ch6.pdf" },
+      { "id": "vit-7", "name": "Unit 7: IT Career Opportunities and Practical Work","subjectId": "voc-it", "pdfUrl": "placeholder://vit-ch7.pdf" }
+    ],
+    "voc-retail": [
+      { "id": "vrt-1", "name": "Unit 1: Introduction to Retail Business",           "subjectId": "voc-retail", "pdfUrl": "placeholder://vrt-ch1.pdf" },
+      { "id": "vrt-2", "name": "Unit 2: Customer Relationship Management",          "subjectId": "voc-retail", "pdfUrl": "placeholder://vrt-ch2.pdf" },
+      { "id": "vrt-3", "name": "Unit 3: Store Operations and Inventory Management", "subjectId": "voc-retail", "pdfUrl": "placeholder://vrt-ch3.pdf" },
+      { "id": "vrt-4", "name": "Unit 4: Visual Merchandising",                      "subjectId": "voc-retail", "pdfUrl": "placeholder://vrt-ch4.pdf" },
+      { "id": "vrt-5", "name": "Unit 5: Retail Career Pathways and Practical",      "subjectId": "voc-retail", "pdfUrl": "placeholder://vrt-ch5.pdf" }
+    ],
+    "voc-auto": [
+      { "id": "vau-1", "name": "Unit 1: Automobile Industry Overview",              "subjectId": "voc-auto", "pdfUrl": "placeholder://vau-ch1.pdf" },
+      { "id": "vau-2", "name": "Unit 2: Engine Components and Working Principle",   "subjectId": "voc-auto", "pdfUrl": "placeholder://vau-ch2.pdf" },
+      { "id": "vau-3", "name": "Unit 3: Transmission and Braking Systems",         "subjectId": "voc-auto", "pdfUrl": "placeholder://vau-ch3.pdf" },
+      { "id": "vau-4", "name": "Unit 4: Electrical Systems in Vehicles",            "subjectId": "voc-auto", "pdfUrl": "placeholder://vau-ch4.pdf" },
+      { "id": "vau-5", "name": "Unit 5: Vehicle Maintenance, Safety and Careers",   "subjectId": "voc-auto", "pdfUrl": "placeholder://vau-ch5.pdf" }
+    ],
+    "voc-tourism": [
+      { "id": "vtr-1", "name": "Unit 1: Introduction to Tourism and Hospitality",   "subjectId": "voc-tourism", "pdfUrl": "placeholder://vtr-ch1.pdf" },
+      { "id": "vtr-2", "name": "Unit 2: Types of Tourism and Tourist Attractions",  "subjectId": "voc-tourism", "pdfUrl": "placeholder://vtr-ch2.pdf" },
+      { "id": "vtr-3", "name": "Unit 3: Hotel Operations and Front Office",         "subjectId": "voc-tourism", "pdfUrl": "placeholder://vtr-ch3.pdf" },
+      { "id": "vtr-4", "name": "Unit 4: Food and Beverage Service",                 "subjectId": "voc-tourism", "pdfUrl": "placeholder://vtr-ch4.pdf" },
+      { "id": "vtr-5", "name": "Unit 5: Tourism Career Opportunities and Practical","subjectId": "voc-tourism", "pdfUrl": "placeholder://vtr-ch5.pdf" }
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+- [Syllabus data architecture](syllabus-data-arch.md) — syllabus.json is source of truth; curriculum.ts re-exports typed constants; never edit chapters directly in curriculum.ts
+- [Navigation pattern](navigation-pattern.md) — useAppRouter() hook is the typed nav interface; all screens should use it instead of raw router.push
+- [AdModal timer cleanup](admodal-timers.md) — all timers/animations gated on visible prop; resetAll() called on close; phase hard-reset on reopen
