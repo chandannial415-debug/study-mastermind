@@ -12,27 +12,34 @@ export type RootStackParamList = {
 
   /** Subject list for a category */
   subjects: {
-    categoryId: string;
-    categoryName: string;
+    categoryId:    string;
+    categoryName:  string;
     /** Hex accent colour forwarded from the category */
     categoryColor: string;
   };
 
   /** Chapter/folder list for a subject */
   chapters: {
-    subjectId: string;
-    subjectName: string;
+    subjectId:     string;
+    subjectName:   string;
     /** Hex accent colour forwarded from the category */
     categoryColor: string;
   };
 
   /** PDF / notes viewer */
   viewer: {
-    chapterId: string;
+    chapterId:   string;
     chapterName: string;
     subjectName: string;
   };
 
-  /** Gaming / Quiz revision mode */
+  /** Gaming / Quiz revision mode hub */
   gaming: undefined;
+
+  /** Active MCQ quiz for a specific subject */
+  quiz: {
+    subjectId:      string;
+    subjectName:    string;
+    categoryColor?: string;
+  };
 };

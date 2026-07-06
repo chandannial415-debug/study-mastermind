@@ -1,0 +1,1 @@
+- [Study Mindset Stage 3](study-mindset-stage3.md) — Stage 3 completed: quiz, PDF viewer, ProgressDashboard, quizData, pdfUrls all live.

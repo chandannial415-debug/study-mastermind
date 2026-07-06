@@ -7,9 +7,10 @@
 import { router } from 'expo-router';
 import type { RootStackParamList } from './types';
 
-type SubjectsParams  = RootStackParamList['subjects'];
-type ChaptersParams  = RootStackParamList['chapters'];
-type ViewerParams    = RootStackParamList['viewer'];
+type SubjectsParams = RootStackParamList['subjects'];
+type ChaptersParams = RootStackParamList['chapters'];
+type ViewerParams   = RootStackParamList['viewer'];
+type QuizParams     = RootStackParamList['quiz'];
 
 export function useAppRouter() {
   return {
@@ -33,8 +34,16 @@ export function useAppRouter() {
       router.push('/gaming');
     },
 
+    goToQuiz(params: QuizParams) {
+      router.push({ pathname: '/quiz', params });
+    },
+
     goBack() {
-      router.back();
+      if (router.canGoBack()) {
+        router.back();
+      } else {
+        router.replace('/home');
+      }
     },
 
     canGoBack() {

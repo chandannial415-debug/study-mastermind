@@ -25,6 +25,7 @@ function RootLayoutNav() {
       <Stack.Screen name="chapters" />
       <Stack.Screen name="viewer" />
       <Stack.Screen name="gaming" options={{ animation: 'slide_from_right' }} />
+      <Stack.Screen name="quiz"   options={{ animation: 'slide_from_right' }} />
     </Stack>
   );
 }
