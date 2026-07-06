@@ -35,49 +35,49 @@
   "subjects": [
     {
       "id": "odia",
-      "name": "Odia (1st Language)",
+      "name": "ସାହିତ୍ୟ ସିଦ୍ଧୁ",
       "iconName": "book-outline",
       "categoryId": "regular",
       "totalChapters": 18
     },
     {
-      "id": "odia-grammar",
-      "name": "Odia Grammar",
+      "id": "Odia Grammar",
+      "name": "ଓଡ଼ିଆ ବ୍ୟାକରଣ",
       "iconName": "pencil-outline",
       "categoryId": "regular",
       "totalChapters": 7
     },
     {
       "id": "algebra",
-      "name": "Algebra",
+      "name": "ବୀଜଗଣିତ",
       "iconName": "calculator-outline",
       "categoryId": "regular",
       "totalChapters": 8
     },
     {
       "id": "geometry",
-      "name": "Geometry",
+      "name": "ଜ୍ୟାମିତି",
       "iconName": "triangle-outline",
       "categoryId": "regular",
       "totalChapters": 7
     },
     {
       "id": "physical-science",
-      "name": "Physical Science",
+      "name": "ଭୈତିକ ବିଜ୍ଞାନ",
       "iconName": "flask-outline",
       "categoryId": "regular",
       "totalChapters": 9
     },
     {
       "id": "life-science",
-      "name": "Life Science",
+      "name": "ଜୀବ ବିଜ୍ଞାନ",
       "iconName": "leaf-outline",
       "categoryId": "regular",
       "totalChapters": 11
     },
     {
       "id": "english",
-      "name": "English (1st Language)",
+      "name": "English",
       "iconName": "document-text-outline",
       "categoryId": "regular",
       "totalChapters": 15
@@ -91,14 +91,14 @@
     },
     {
       "id": "history",
-      "name": "History",
+      "name": "ଇତିହାସ",
       "iconName": "time-outline",
       "categoryId": "regular",
       "totalChapters": 8
     },
     {
       "id": "geography",
-      "name": "Geography",
+      "name": "ଭୂଗୋଳ",
       "iconName": "earth-outline",
       "categoryId": "regular",
       "totalChapters": 19
@@ -162,24 +162,24 @@
   ],
   "chapters": {
     "odia": [
-      { "id": "odia-1",  "name": "Mo Bhuin Mo Gram (My Land My Village)",         "subjectId": "odia", "pdfUrl": "placeholder://odia-ch1.pdf" },
-      { "id": "odia-2",  "name": "Tuma Pada Tala (At Your Feet)",                  "subjectId": "odia", "pdfUrl": "placeholder://odia-ch2.pdf" },
-      { "id": "odia-3",  "name": "Sandhya Ra Swar (Evening Voice)",                "subjectId": "odia", "pdfUrl": "placeholder://odia-ch3.pdf" },
-      { "id": "odia-4",  "name": "Kabi O Kabita (Poet and Poetry)",                "subjectId": "odia", "pdfUrl": "placeholder://odia-ch4.pdf" },
-      { "id": "odia-5",  "name": "Satara Ra Shishu (Children of Independence)",    "subjectId": "odia", "pdfUrl": "placeholder://odia-ch5.pdf" },
-      { "id": "odia-6",  "name": "Mamu Ra Girija (Uncle's Girija)",                "subjectId": "odia", "pdfUrl": "placeholder://odia-ch6.pdf" },
-      { "id": "odia-7",  "name": "Desara Mati (Soil of the Country)",              "subjectId": "odia", "pdfUrl": "placeholder://odia-ch7.pdf" },
-      { "id": "odia-8",  "name": "Nua Kabi Nua Swar (New Poet New Voice)",         "subjectId": "odia", "pdfUrl": "placeholder://odia-ch8.pdf" },
-      { "id": "odia-9",  "name": "Ama Odisha (Our Odisha)",                         "subjectId": "odia", "pdfUrl": "placeholder://odia-ch9.pdf" },
-      { "id": "odia-10", "name": "Manisha Ra Sapna (Human Dreams)",                "subjectId": "odia", "pdfUrl": "placeholder://odia-ch10.pdf" },
-      { "id": "odia-11", "name": "Prathama Prayas (First Attempt)",                "subjectId": "odia", "pdfUrl": "placeholder://odia-ch11.pdf" },
-      { "id": "odia-12", "name": "Gita Ra Path (Lessons from Gita)",               "subjectId": "odia", "pdfUrl": "placeholder://odia-ch12.pdf" },
-      { "id": "odia-13", "name": "Jeevan Ra Artha (Meaning of Life)",              "subjectId": "odia", "pdfUrl": "placeholder://odia-ch13.pdf" },
-      { "id": "odia-14", "name": "Balaka Ra Prati (To the Child)",                 "subjectId": "odia", "pdfUrl": "placeholder://odia-ch14.pdf" },
-      { "id": "odia-15", "name": "Nari Shakti (Women's Power)",                    "subjectId": "odia", "pdfUrl": "placeholder://odia-ch15.pdf" },
-      { "id": "odia-16", "name": "Paribarana Raksha (Environmental Protection)",   "subjectId": "odia", "pdfUrl": "placeholder://odia-ch16.pdf" },
-      { "id": "odia-17", "name": "Swadhina Bharata (Independent India)",           "subjectId": "odia", "pdfUrl": "placeholder://odia-ch17.pdf" },
-      { "id": "odia-18", "name": "Odishara Samskruti (Culture of Odisha)",         "subjectId": "odia", "pdfUrl": "placeholder://odia-ch18.pdf" }
+      { "id": "odia-1",  "name": "ବନ୍ଦେ ଉତ୍କଳ ଜନନୀ",         "subjectId": "odia", "pdfUrl": "placeholder://odia-ch1.pdf" },
+      { "id": "odia-2",  "name": "ଭୀମଙ୍କ ସିଂଘନାଦ ରଡି",                  "subjectId": "odia", "pdfUrl": "placeholder://odia-ch2.pdf" },
+      { "id": "odia-3",  "name": "ରାଘବଙ୍କ ଲଙ୍କା ଯାତ୍ରାନୁକୂଳ",                "subjectId": "odia", "pdfUrl": "placeholder://odia-ch3.pdf" },
+      { "id": "odia-4",  "name": "ଚିଲିକାରେ ସାୟନ୍ତନ ଦୃଶ୍ୟ",                "subjectId": "odia", "pdfUrl": "placeholder://odia-ch4.pdf" },
+      { "id": "odia-5",  "name": "ମଙ୍ଗଳେ ଆଇଲା ଉଷା",    "subjectId": "odia", "pdfUrl": "placeholder://odia-ch5.pdf" },
+      { "id": "odia-6",  "name": "ଜାଗ ବନ୍ଧନହରା",                "subjectId": "odia", "pdfUrl": "placeholder://odia-ch6.pdf" },
+      { "id": "odia-7",  "name": "ସର୍ବସଂହା ମାଟି",              "subjectId": "odia", "pdfUrl": "placeholder://odia-ch7.pdf" },
+      { "id": "odia-8",  "name": "କାନ୍ତକବି ଲକ୍ଷ୍ମୀକାନ୍ତ ମହାପାତ୍ର",         "subjectId": "odia", "pdfUrl": "placeholder://odia-ch8.pdf" },
+      { "id": "odia-9",  "name": "ଜନ୍ମଭୂମି",                         "subjectId": "odia", "pdfUrl": "placeholder://odia-ch9.pdf" },
+      { "id": "odia-10", "name": "ସଭ୍ୟତା ଓ ବିଜ୍ଞାନ",                "subjectId": "odia", "pdfUrl": "placeholder://odia-ch10.pdf" },
+      { "id": "odia-11", "name": "ମାତୃଭାଷା ଓ ଲୋକଶୀକ୍ଷା",                "subjectId": "odia", "pdfUrl": "placeholder://odia-ch11.pdf" },
+      { "id": "odia-12", "name": "ନରେନ୍ ରୁ ବିବେକାନନ୍ଦ",               "subjectId": "odia", "pdfUrl": "placeholder://odia-ch12.pdf" },
+      { "id": "odia-13", "name": "ଓଡ଼ିଆ ସାହିତ୍ୟ କଥା",              "subjectId": "odia", "pdfUrl": "placeholder://odia-ch13.pdf" },
+      { "id": "odia-14", "name": "କାଠ",                 "subjectId": "odia", "pdfUrl": "placeholder://odia-ch14.pdf" },
+      { "id": "odia-15", "name": "କାଳର କପୋତ ତଳେ",                    "subjectId": "odia", "pdfUrl": "placeholder://odia-ch15.pdf" },
+      { "id": "odia-16", "name": "ବେଲ, ଅଶ୍ଵତଥ ଓ ବଟବୃକ୍ଷ",   "subjectId": "odia", "pdfUrl": "placeholder://odia-ch16.pdf" },
+      { "id": "odia-17", "name": "ଫଲ୍ ଗୁ",           "subjectId": "odia", "pdfUrl": "placeholder://odia-ch17.pdf" },
+      { "id": "odia-18", "name": "କୋଣାର୍କ",         "subjectId": "odia", "pdfUrl": "placeholder://odia-ch18.pdf" }
     ],
     "odia-grammar": [
       { "id": "odia-gr-1", "name": "Shabda Bibhakti (Case Endings)",               "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch1.pdf" },
