@@ -41,7 +41,7 @@
       "totalChapters": 18
     },
     {
-      "id": "Odia Grammar",
+      "id": "odia-grammar",
       "name": "ଓଡ଼ିଆ ବ୍ୟାକରଣ",
       "iconName": "pencil-outline",
       "categoryId": "regular",
@@ -182,56 +182,56 @@
       { "id": "odia-18", "name": "କୋଣାର୍କ",         "subjectId": "odia", "pdfUrl": "placeholder://odia-ch18.pdf" }
     ],
     "odia-grammar": [
-      { "id": "odia-gr-1", "name": "Shabda Bibhakti (Case Endings)",               "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch1.pdf" },
-      { "id": "odia-gr-2", "name": "Kriya Pada (Verb Forms)",                      "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch2.pdf" },
-      { "id": "odia-gr-3", "name": "Kala O Karakas (Tense and Cases)",             "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch3.pdf" },
-      { "id": "odia-gr-4", "name": "Samaas (Compound Words)",                      "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch4.pdf" },
-      { "id": "odia-gr-5", "name": "Sandhi (Euphonic Combinations)",               "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch5.pdf" },
-      { "id": "odia-gr-6", "name": "Alankara (Figures of Speech)",                 "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch6.pdf" },
-      { "id": "odia-gr-7", "name": "Patra Lekhan (Letter Writing)",                "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch7.pdf" }
+      { "id": "odia-gr-1", "name": "ବାକ୍ୟ ବିଚାର",               "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch1.pdf" },
+      { "id": "odia-gr-2", "name": "ଣତ୍ୱ ବିଧି‌, ଷତ୍ବ ବିଧି",                      "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch2.pdf" },
+      { "id": "odia-gr-3", "name": "ରୂଢି ଓ ଲୋକବାଣୀ",             "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch3.pdf" },
+      { "id": "odia-gr-4", "name": "ଅନୁବାଦ ପ୍ରକରଣ",                      "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch4.pdf" },
+      { "id": "odia-gr-5", "name": "ଛନ୍ଦ ଓ ଅଳଙ୍କାର",               "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch5.pdf" },
+      { "id": "odia-gr-6", "name": "ତଥ୍ୟଭିତ୍ତିକ ବିବରଣି",                 "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch6.pdf" },
+      { "id": "odia-gr-7", "name": "ଟିପ୍ପଣୀ ଓ ଚିଠା ପ୍ରସ୍ତୁତି",                "subjectId": "odia-grammar", "pdfUrl": "placeholder://odia-gr-ch7.pdf" }
     ],
     "algebra": [
-      { "id": "alg-1", "name": "Chapter 1: Real Numbers and Surds",                "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch1.pdf" },
-      { "id": "alg-2", "name": "Chapter 2: Polynomials",                           "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch2.pdf" },
-      { "id": "alg-3", "name": "Chapter 3: Linear Equations in Two Variables",     "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch3.pdf" },
-      { "id": "alg-4", "name": "Chapter 4: Pair of Linear Equations",              "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch4.pdf" },
-      { "id": "alg-5", "name": "Chapter 5: Quadratic Equations",                   "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch5.pdf" },
-      { "id": "alg-6", "name": "Chapter 6: Arithmetic Progressions",               "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch6.pdf" },
-      { "id": "alg-7", "name": "Chapter 7: Statistics",                            "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch7.pdf" },
-      { "id": "alg-8", "name": "Chapter 8: Probability",                           "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch8.pdf" }
+      { "id": "alg-1", "name": "ସରଳ ସମୀକରଣ",                "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch1.pdf" },
+      { "id": "alg-2", "name": "ଦ୍ଵିଘାତ ସମୀକରଣ",                           "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch2.pdf" },
+      { "id": "alg-3", "name": "ସମାନ୍ତର ପ୍ରଗତି",     "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch3.pdf" },
+      { "id": "alg-4", "name": "ସମ୍ଭାବ୍ୟତା",              "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch4.pdf" },
+      { "id": "alg-5", "name": "ପରିସଂଖ୍ୟନ",                   "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch5.pdf" },
+      { "id": "alg-6", "name": "ସ୍ଥାନାଙ୍କ ଜ୍ୟମୀତି",               "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch6.pdf" },
+      { "id": "alg-7", "name": "ସଡକ ସୁରକ୍ଷା ଶିକ୍ଷା",                            "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch7.pdf" },
+      { "id": "alg-8", "name": "ଉତ୍ତରମାଳା",                           "subjectId": "algebra", "pdfUrl": "placeholder://alg-ch8.pdf" }
     ],
     "geometry": [
-      { "id": "geo-1", "name": "Chapter 1: Similar Triangles",                     "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch1.pdf" },
-      { "id": "geo-2", "name": "Chapter 2: Circles and Tangents",                  "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch2.pdf" },
-      { "id": "geo-3", "name": "Chapter 3: Constructions",                         "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch3.pdf" },
-      { "id": "geo-4", "name": "Chapter 4: Coordinate Geometry",                   "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch4.pdf" },
-      { "id": "geo-5", "name": "Chapter 5: Introduction to Trigonometry",          "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch5.pdf" },
-      { "id": "geo-6", "name": "Chapter 6: Heights and Distances",                 "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch6.pdf" },
-      { "id": "geo-7", "name": "Chapter 7: Areas and Volumes (Mensuration)",       "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch7.pdf" }
+      { "id": "geo-1", "name": "ଜ୍ୟାମିତିରେ ସାଦୃଶ୍ୟ",                     "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch1.pdf" },
+      { "id": "geo-2", "name": "ବୃତ୍ତ",                  "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch2.pdf" },
+      { "id": "geo-3", "name": "ବୃତ୍ତର ସ୍ପର୍ଶକ",                         "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch3.pdf" },
+      { "id": "geo-4", "name": "ତ୍ରିକୋଣମିତି",                   "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch4.pdf" },
+      { "id": "geo-5", "name": "ପରିମିତି",          "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch5.pdf" },
+      { "id": "geo-6", "name": "ଅଙ୍କନ",                 "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch6.pdf" },
+      { "id": "geo-7", "name": "ଉତ୍ତରମାଳା",       "subjectId": "geometry", "pdfUrl": "placeholder://geo-ch7.pdf" }
     ],
     "physical-science": [
-      { "id": "phy-1",  "name": "Chapter 1: Chemical Reactions and Equations",     "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch1.pdf" },
-      { "id": "phy-2",  "name": "Chapter 2: Acids, Bases and Salts",               "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch2.pdf" },
-      { "id": "phy-3",  "name": "Chapter 3: Metals and Non-Metals",                "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch3.pdf" },
-      { "id": "phy-4",  "name": "Chapter 4: Carbon and Its Compounds",             "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch4.pdf" },
-      { "id": "phy-5",  "name": "Chapter 5: Periodic Classification of Elements",  "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch5.pdf" },
-      { "id": "phy-6",  "name": "Chapter 6: Light — Reflection and Refraction",    "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch6.pdf" },
-      { "id": "phy-7",  "name": "Chapter 7: Human Eye and Colourful World",        "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch7.pdf" },
-      { "id": "phy-8",  "name": "Chapter 8: Electricity and Its Effects",          "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch8.pdf" },
-      { "id": "phy-9",  "name": "Chapter 9: Magnetic Effects of Electric Current", "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch9.pdf" }
+      { "id": "phy-1",  "name": "ରାସାୟନୀକ ପ୍ରତିକ୍ରିୟା",     "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch1.pdf" },
+      { "id": "phy-2",  "name": "ଅମ୍ଳ,କ୍ଷରକ ଓ ଲବଣ",               "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch2.pdf" },
+      { "id": "phy-3",  "name": "ଧାତୁ ଓ ଅଧାତୁ",                "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch3.pdf" },
+      { "id": "phy-4",  "name": "କର୍ବନ ଓ ଏହାର ଯୈଗିକ",             "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch4.pdf" },
+      { "id": "phy-5",  "name": "ମୈଳିକଗୁଡିକର ପର୍ଯାୟୀ ଶ୍ରେଣୀକରଣ",  "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch5.pdf" },
+      { "id": "phy-6",  "name": "ଆଲୋକ",    "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch6.pdf" },
+      { "id": "phy-7",  "name": "ମନବ ଚକ୍ଷୁ ଓ ବର୍ଣ୍ଣଜଗତ ",        "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch7.pdf" },
+      { "id": "phy-8",  "name": "ବିଦ୍ୟୁତ୍",          "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch8.pdf" },
+      { "id": "phy-9",  "name": "ବିଦ୍ୟୁତ୍ ସ୍ରୋତର ଚୁମ୍ବକୀୟ ପ୍ରଭାବ", "subjectId": "physical-science", "pdfUrl": "placeholder://phy-ch9.pdf" }
     ],
     "life-science": [
-      { "id": "ls-1",  "name": "Chapter 1: Life Processes",                        "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch1.pdf" },
-      { "id": "ls-2",  "name": "Chapter 2: Control and Coordination",              "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch2.pdf" },
-      { "id": "ls-3",  "name": "Chapter 3: Reproduction in Organisms",             "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch3.pdf" },
-      { "id": "ls-4",  "name": "Chapter 4: Heredity and Evolution",                "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch4.pdf" },
-      { "id": "ls-5",  "name": "Chapter 5: Our Environment",                       "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch5.pdf" },
-      { "id": "ls-6",  "name": "Chapter 6: Natural Resources and Conservation",    "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch6.pdf" },
-      { "id": "ls-7",  "name": "Chapter 7: Cell Biology",                          "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch7.pdf" },
-      { "id": "ls-8",  "name": "Chapter 8: Nutrition in Plants and Animals",       "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch8.pdf" },
-      { "id": "ls-9",  "name": "Chapter 9: Respiration and Excretion",             "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch9.pdf" },
-      { "id": "ls-10", "name": "Chapter 10: Ecosystem and Biodiversity",           "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch10.pdf" },
-      { "id": "ls-11", "name": "Chapter 11: Human Health and Disease",             "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch11.pdf" }
+      { "id": "ls-1",  "name": "ପୋଷଣ",                        "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch1.pdf" },
+      { "id": "ls-2",  "name": "ଶ୍ଵସନ",              "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch2.pdf" },
+      { "id": "ls-3",  "name": "ପରିବହନ ଓ ସଞ୍ଚାଳନ",             "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch3.pdf" },
+      { "id": "ls-4",  "name": "ରେଚନ",                "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch4.pdf" },
+      { "id": "ls-5",  "name": "ନୀୟନ୍ତ୍ରଣ ଓ ସମନ୍ୱୟ",                       "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch5.pdf" },
+      { "id": "ls-6",  "name": "ଜନନ",    "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch6.pdf" },
+      { "id": "ls-7",  "name": "ବଂଶାନୁକ୍ରମ ଓ ବିବର୍ତ୍ତନ",                          "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch7.pdf" },
+      { "id": "ls-8",  "name": "ଶକ୍ତିର ଉତ୍ସ",       "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch8.pdf" },
+      { "id": "ls-9",  "name": "ଆମ ପରିବେଶ",             "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch9.pdf" },
+      { "id": "ls-10", "name": "ପ୍ରକୃତିକ ସମ୍ପଦର ସଂରକ୍ଷଣ",           "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch10.pdf" },
+      { "id": "ls-11", "name": "ବିଶ୍ଵ ମହାମାରୀ କୋଭଡ୍-୧୯",             "subjectId": "life-science", "pdfUrl": "placeholder://ls-ch11.pdf" }
     ],
     "english": [
       { "id": "eng-1",  "name": "Chapter 1: A Letter to God",                      "subjectId": "english", "pdfUrl": "placeholder://eng-ch1.pdf" },

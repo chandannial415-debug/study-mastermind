@@ -1,1 +1,2 @@
 - [Study Mindset Stage 3](study-mindset-stage3.md) — Stage 3 completed: quiz, PDF viewer, ProgressDashboard, quizData, pdfUrls all live.
+- [syllabus-json-integrity](syllabus-json-integrity.md) — Invalid JSON in syllabus.json causes silent blank white screen; always validate after edits.

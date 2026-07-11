@@ -26,20 +26,49 @@ export type RootStackParamList = {
     categoryColor: string;
   };
 
-  /** PDF / notes viewer */
+  /** Chapter hub — 5 folders (Full Book, Small Notebook, MCQ, PYQ, Gaming Mode) */
+  chapterHub: {
+    chapterId:     string;
+    chapterName:   string;
+    subjectId:     string;
+    subjectName:   string;
+    categoryColor: string;
+  };
+
+  /** PDF / full textbook notes viewer */
   viewer: {
     chapterId:   string;
     chapterName: string;
     subjectName: string;
   };
 
-  /** Gaming / Quiz revision mode hub */
+  /** Small Notebook — short revision notes for a chapter */
+  notes: {
+    chapterId:   string;
+    chapterName: string;
+    subjectName: string;
+  };
+
+  /** Previous Year Questions practice screen for a chapter */
+  pyq: {
+    chapterId:      string;
+    chapterName:    string;
+    subjectName:    string;
+    categoryColor?: string;
+  };
+
+  /** Gaming / Quiz revision mode hub (subject-wide) */
   gaming: undefined;
 
-  /** Active MCQ quiz for a specific subject */
+  /** Active MCQ quiz — either subject-wide or scoped to one chapter */
   quiz: {
     subjectId:      string;
     subjectName:    string;
     categoryColor?: string;
+    /** When set, quiz pulls chapter-specific questions first (falls back to subject bank) */
+    chapterId?:     string;
+    chapterName?:   string;
+    /** 'mcq' = standard practice, 'gaming' = same engine with festive framing, requires internet */
+    mode?:          'mcq' | 'gaming';
   };
 };

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
-  Alert,
   Platform,
   Pressable,
   ScrollView,
@@ -15,23 +14,21 @@ import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { useColors } from '@/hooks/useColors';
 import { useApp } from '@/src/context/AppContext';
+import { useAppRouter } from '@/src/navigation';
 import { getChaptersBySubject } from '@/src/data/curriculum';
 import type { Chapter } from '@/src/data/curriculum';
 import ChapterRow from '@/src/components/ChapterRow';
-import AdModal from '@/src/components/AdModal';
 
 export default function ChaptersScreen() {
   const colors = useColors();
   const insets = useSafeAreaInsets();
+  const nav    = useAppRouter();
   const { subjectId, subjectName, categoryColor } = useLocalSearchParams<{
     subjectId: string;
     subjectName: string;
     categoryColor: string;
   }>();
-  const { isOnline, isDownloaded, markDownloaded } = useApp();
-
-  const [adModalVisible, setAdModalVisible] = useState(false);
-  const [activeChapter, setActiveChapter] = useState<Chapter | null>(null);
+  const { isOnline, isDownloaded } = useApp();
 
   const chapters = getChaptersBySubject(subjectId ?? '');
   const accentColor = categoryColor ?? '#1565C0';
@@ -41,58 +38,17 @@ export default function ChaptersScreen() {
   const botPad = Platform.OS === 'web' ? 34 : insets.bottom;
 
   function handleChapterPress(chapter: Chapter) {
-    const downloaded = isDownloaded(chapter.id);
-
-    if (downloaded) {
-      // Already downloaded — open viewer directly (works offline too)
-      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-      router.push({
-        pathname: '/viewer',
-        params: {
-          chapterId: chapter.id,
-          chapterName: chapter.name,
-          subjectName: subjectName ?? '',
-        },
-      });
-      return;
-    }
-
-    // Not downloaded yet
-    if (!isOnline) {
-      // Offline and not downloaded
-      Alert.alert(
-        'No Internet Connection',
-        'This chapter has not been downloaded yet. Please connect to the internet and download it first.',
-        [{ text: 'OK' }],
-      );
-      return;
-    }
-
-    // Online — show ad to unlock download
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    setActiveChapter(chapter);
-    setAdModalVisible(true);
-  }
-
-  function handleDownloadComplete() {
-    if (!activeChapter) return;
-    markDownloaded(activeChapter.id);
-    setAdModalVisible(false);
-    // Navigate to viewer
-    router.push({
-      pathname: '/viewer',
-      params: {
-        chapterId: activeChapter.id,
-        chapterName: activeChapter.name,
-        subjectName: subjectName ?? '',
-      },
+    // Every chapter opens its 5-folder hub (Full Book, Small Notebook,
+    // MCQ, Previous Year Questions, Gaming Mode). Download/ad-gating for
+    // the PDF now lives inside the Full Book folder on that screen.
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    nav.goToChapterHub({
+      chapterId:     chapter.id,
+      chapterName:   chapter.name,
+      subjectId:     subjectId ?? '',
+      subjectName:   subjectName ?? '',
+      categoryColor: accentColor,
     });
-    setActiveChapter(null);
-  }
-
-  function handleModalClose() {
-    setAdModalVisible(false);
-    setActiveChapter(null);
   }
 
   return (
@@ -166,7 +122,7 @@ export default function ChaptersScreen() {
         showsVerticalScrollIndicator={false}
       >
         <Text style={[styles.sectionLabel, { color: colors.mutedForeground }]}>
-          TAP TO DOWNLOAD • FOLDER = CHAPTER
+          TAP A CHAPTER TO OPEN ITS FOLDERS
         </Text>
 
         {chapters.map((chapter) => (
@@ -182,18 +138,11 @@ export default function ChaptersScreen() {
         <View style={[styles.hintBox, { backgroundColor: colors.card, borderColor: colors.border }]}>
           <Ionicons name="bulb-outline" size={18} color="#FFA000" />
           <Text style={[styles.hintText, { color: colors.mutedForeground }]}>
-            Watch a short ad to download any chapter for offline study. Downloaded chapters open instantly without internet.
+            Tap any chapter to open its Full Book, Small Notebook, MCQ, Previous Year
+            Questions, and Gaming Mode folders.
           </Text>
         </View>
       </ScrollView>
-
-      {/* Ad Modal */}
-      <AdModal
-        visible={adModalVisible}
-        chapterName={activeChapter?.name ?? ''}
-        onClose={handleModalClose}
-        onDownloadComplete={handleDownloadComplete}
-      />
     </View>
   );
 }

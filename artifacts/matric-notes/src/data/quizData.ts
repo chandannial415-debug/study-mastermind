@@ -29,6 +29,8 @@ const CACHE_TTL_MS     = 24 * 60 * 60 * 1000; // 24 hours
 export type QuizQuestion = {
   id: string;
   subjectId: string;
+  /** Optional — when set, this question is scoped to one specific chapter */
+  chapterId?: string;
   /** Question text — may be in the subject's native language */
   question: string;
   /** Exactly 4 options */
@@ -648,4 +650,24 @@ async function _tryRefreshFromDrive(): Promise<void> {
 /** Returns all subjects that have at least one question in the local bank */
 export function getQuizSubjectIds(): string[] {
   return [...new Set(LOCAL_QUIZ_BANK.map((q) => q.subjectId))];
+}
+
+/**
+ * Fetches questions scoped to a specific chapter.
+ * If chapter-specific questions exist, only those are returned.
+ * Otherwise falls back to the full subject-level bank (existing behaviour),
+ * so every chapter's MCQ/Gaming folder always has something to practice.
+ */
+export async function fetchQuizQuestionsForChapter(
+  chapterId: string,
+  subjectId: string,
+): Promise<QuizQuestion[]> {
+  const subjectQuestions = await fetchQuizQuestions(subjectId);
+  const chapterQuestions = subjectQuestions.filter((q) => q.chapterId === chapterId);
+  return chapterQuestions.length > 0 ? chapterQuestions : subjectQuestions;
+}
+
+/** Returns true if a chapter has at least one chapter-specific question authored. */
+export function hasChapterQuestions(chapterId: string): boolean {
+  return LOCAL_QUIZ_BANK.some((q) => q.chapterId === chapterId);
 }

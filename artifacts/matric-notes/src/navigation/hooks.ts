@@ -7,10 +7,13 @@
 import { router } from 'expo-router';
 import type { RootStackParamList } from './types';
 
-type SubjectsParams = RootStackParamList['subjects'];
-type ChaptersParams = RootStackParamList['chapters'];
-type ViewerParams   = RootStackParamList['viewer'];
-type QuizParams     = RootStackParamList['quiz'];
+type SubjectsParams   = RootStackParamList['subjects'];
+type ChaptersParams   = RootStackParamList['chapters'];
+type ChapterHubParams = RootStackParamList['chapterHub'];
+type ViewerParams     = RootStackParamList['viewer'];
+type NotesParams      = RootStackParamList['notes'];
+type PyqParams        = RootStackParamList['pyq'];
+type QuizParams       = RootStackParamList['quiz'];
 
 export function useAppRouter() {
   return {
@@ -26,8 +29,20 @@ export function useAppRouter() {
       router.push({ pathname: '/chapters', params });
     },
 
+    goToChapterHub(params: ChapterHubParams) {
+      router.push({ pathname: '/chapter-hub', params });
+    },
+
     goToViewer(params: ViewerParams) {
       router.push({ pathname: '/viewer', params });
+    },
+
+    goToNotes(params: NotesParams) {
+      router.push({ pathname: '/notes', params });
+    },
+
+    goToPyq(params: PyqParams) {
+      router.push({ pathname: '/pyq', params });
     },
 
     goToGaming() {
