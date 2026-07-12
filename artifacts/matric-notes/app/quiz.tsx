@@ -393,14 +393,14 @@ export default function QuizScreen() {
       setSessionCorrect((c) => c + 1);
       setCelebrating(true);
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-      recordQuizAnswer(true);
+      recordQuizAnswer(currentQ.id, true);
       // Auto-advance after 1.5 s
       autoAdvanceRef.current = setTimeout(() => { advance(); }, AUTO_ADVANCE_MS);
     } else {
       setAnswerState('wrong');
       setCelebrating(false);
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
-      recordQuizAnswer(false);
+      recordQuizAnswer(currentQ.id, false);
       // Next button must be tapped manually
     }
   }
