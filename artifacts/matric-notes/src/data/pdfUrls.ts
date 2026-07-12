@@ -1,22 +1,29 @@
 /**
- * Study Mindset — Google Drive PDF URL Registry
- * ──────────────────────────────────────────────
- * Maps each chapter ID to its Google Drive file ID.
- * Replace the empty strings with real file IDs once PDFs are uploaded to Drive.
+ * PDF URL Registry
+ * ─────────────────────────────────────────────────────────────────────────────
+ * SOURCE OF TRUTH: src/data/drive-sources.json
  *
- * How to get a file ID:
- *   1. Upload the PDF to Google Drive
- *   2. Right-click → Share → Copy link
- *   3. The URL is: https://drive.google.com/file/d/{FILE_ID}/view
- *   4. Paste the FILE_ID below for the matching chapter
+ * To add a PDF for any chapter:
+ *   1. Open  src/data/drive-sources.json
+ *   2. Find the subject and chapter
+ *   3. Paste your Google Drive share link into the "PDF" field
+ *   4. Save — the app picks it up automatically on next load
  *
- * Viewer URL format:  https://drive.google.com/file/d/{ID}/view
- * Embed URL format:   https://drive.google.com/file/d/{ID}/preview
- * Download URL:       https://drive.google.com/uc?export=download&id={ID}
+ * This file now acts as a fallback for any chapter IDs that are still stored
+ * as raw Drive file IDs (legacy format). New content always goes through
+ * drive-sources.json.
  */
 
-/** Google Drive file IDs keyed by chapter ID. Empty = not yet uploaded. */
-export const PDF_DRIVE_IDS: Record<string, string> = {
+import {
+  getPdfUrlFromConfig,
+  buildDrivePdfViewUrl,
+  buildDrivePdfEmbedUrl,
+  hasPdfInConfig,
+} from './driveLoader';
+
+// ── Legacy fallback — raw Drive file IDs (keep until migrated to config) ──────
+// To migrate: move the ID to drive-sources.json as a full share URL instead.
+const LEGACY_PDF_IDS: Record<string, string> = {
   // ── Odia ────────────────────────────────────────
   'odia-1': '', 'odia-2': '', 'odia-3': '', 'odia-4': '', 'odia-5': '',
   'odia-6': '', 'odia-7': '', 'odia-8': '', 'odia-9': '', 'odia-10': '',
@@ -97,29 +104,47 @@ export const PDF_DRIVE_IDS: Record<string, string> = {
 
 const DRIVE_BASE = 'https://drive.google.com/file/d';
 
+// ── Public API ─────────────────────────────────────────────────────────────────
+
 /**
- * Returns the Google Drive viewer URL for a chapter, or null if no ID is set.
- * Opens as a standard Google Drive view page — works in any browser.
+ * Returns the Google Drive viewer URL for a chapter.
+ * Checks drive-sources.json first, falls back to legacy ID map.
+ * Returns null if no PDF is configured for this chapter.
  */
 export function getPdfViewUrl(chapterId: string): string | null {
-  const id = PDF_DRIVE_IDS[chapterId];
-  if (!id) return null;
-  return `${DRIVE_BASE}/${id}/view`;
+  // 1. Config file (drive-sources.json) — highest priority
+  const configUrl = getPdfUrlFromConfig(chapterId);
+  if (configUrl) return buildDrivePdfViewUrl(configUrl);
+
+  // 2. Legacy file-ID fallback
+  const legacyId = LEGACY_PDF_IDS[chapterId];
+  if (legacyId) return `${DRIVE_BASE}/${legacyId}/view`;
+
+  return null;
 }
 
 /**
  * Returns the Google Drive embeddable preview URL (for WebView use).
- * Returns null if no ID is set.
+ * Returns null if no PDF is configured.
  */
 export function getPdfEmbedUrl(chapterId: string): string | null {
-  const id = PDF_DRIVE_IDS[chapterId];
-  if (!id) return null;
-  return `${DRIVE_BASE}/${id}/preview`;
+  // 1. Config file
+  const configUrl = getPdfUrlFromConfig(chapterId);
+  if (configUrl) return buildDrivePdfEmbedUrl(configUrl);
+
+  // 2. Legacy fallback
+  const legacyId = LEGACY_PDF_IDS[chapterId];
+  if (legacyId) return `${DRIVE_BASE}/${legacyId}/preview`;
+
+  return null;
 }
 
 /**
- * Returns whether a chapter has a real Drive PDF configured.
+ * Returns whether a chapter has a PDF configured (either in config or legacy map).
  */
 export function hasPdf(chapterId: string): boolean {
-  return Boolean(PDF_DRIVE_IDS[chapterId]);
+  return hasPdfInConfig(chapterId) || Boolean(LEGACY_PDF_IDS[chapterId]);
 }
+
+// Keep legacy export for any code that reads raw IDs directly
+export const PDF_DRIVE_IDS = LEGACY_PDF_IDS;

@@ -1,0 +1,325 @@
+{
+  "_INSTRUCTIONS": {
+    "ABOUT": "This is the ONLY file you need to edit to add Google Drive content. Paste your public Drive links below.",
+    "HOW_TO_GET_A_LINK": [
+      "1. Upload your PDF or JSON file to Google Drive",
+      "2. Right-click the file → Share → Change to 'Anyone with the link'",
+      "3. Click 'Copy link' and paste it below",
+      "4. Save this file — the app will automatically fetch the new content"
+    ],
+    "ACCEPTED_URL_FORMATS": [
+      "https://drive.google.com/file/d/YOUR_FILE_ID/view",
+      "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing",
+      "https://drive.google.com/open?id=YOUR_FILE_ID",
+      "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID"
+    ],
+    "MCQ_JSON_FORMAT": {
+      "note": "Your MCQ JSON file must follow this schema:",
+      "schema": {
+        "version": "1.0",
+        "questions": [
+          {
+            "id": "alg-q1",
+            "subjectId": "algebra",
+            "chapterId": "alg-1",
+            "question": "Your question text here",
+            "options": ["Option A", "Option B", "Option C", "Option D"],
+            "correctIndex": 0,
+            "explanation": "Brief explanation (optional)"
+          }
+        ]
+      }
+    },
+    "TIP": "Leave any field as empty string '' if you do not have that content yet. The app will skip it gracefully."
+  },
+
+  "10th_Class": {
+    "Regular_Courses": {
+
+      "Algebra": {
+        "_subject_id": "algebra",
+        "_all_chapter_mcqs": "",
+        "Chapter_1": { "PDF": "", "MCQs": "" },
+        "Chapter_2": { "PDF": "", "MCQs": "" },
+        "Chapter_3": { "PDF": "", "MCQs": "" },
+        "Chapter_4": { "PDF": "", "MCQs": "" },
+        "Chapter_5": { "PDF": "", "MCQs": "" },
+        "Chapter_6": { "PDF": "", "MCQs": "" },
+        "Chapter_7": { "PDF": "", "MCQs": "" },
+        "Chapter_8": { "PDF": "", "MCQs": "" }
+      },
+
+      "Geometry": {
+        "_subject_id": "geometry",
+        "_all_chapter_mcqs": "",
+        "Chapter_1": { "PDF": "", "MCQs": "" },
+        "Chapter_2": { "PDF": "", "MCQs": "" },
+        "Chapter_3": { "PDF": "", "MCQs": "" },
+        "Chapter_4": { "PDF": "", "MCQs": "" },
+        "Chapter_5": { "PDF": "", "MCQs": "" },
+        "Chapter_6": { "PDF": "", "MCQs": "" },
+        "Chapter_7": { "PDF": "", "MCQs": "" }
+      },
+
+      "Physical_Science": {
+        "_subject_id": "physical-science",
+        "_all_chapter_mcqs": "",
+        "Chapter_1": { "PDF": "", "MCQs": "" },
+        "Chapter_2": { "PDF": "", "MCQs": "" },
+        "Chapter_3": { "PDF": "", "MCQs": "" },
+        "Chapter_4": { "PDF": "", "MCQs": "" },
+        "Chapter_5": { "PDF": "", "MCQs": "" },
+        "Chapter_6": { "PDF": "", "MCQs": "" },
+        "Chapter_7": { "PDF": "", "MCQs": "" },
+        "Chapter_8": { "PDF": "", "MCQs": "" },
+        "Chapter_9": { "PDF": "", "MCQs": "" }
+      },
+
+      "Life_Science": {
+        "_subject_id": "life-science",
+        "_all_chapter_mcqs": "",
+        "Chapter_1": { "PDF": "", "MCQs": "" },
+        "Chapter_2": { "PDF": "", "MCQs": "" },
+        "Chapter_3": { "PDF": "", "MCQs": "" },
+        "Chapter_4": { "PDF": "", "MCQs": "" },
+        "Chapter_5": { "PDF": "", "MCQs": "" },
+        "Chapter_6": { "PDF": "", "MCQs": "" },
+        "Chapter_7": { "PDF": "", "MCQs": "" },
+        "Chapter_8": { "PDF": "", "MCQs": "" },
+        "Chapter_9": { "PDF": "", "MCQs": "" },
+        "Chapter_10": { "PDF": "", "MCQs": "" },
+        "Chapter_11": { "PDF": "", "MCQs": "" }
+      },
+
+      "English": {
+        "_subject_id": "english",
+        "_all_chapter_mcqs": "",
+        "Chapter_1":  { "PDF": "", "MCQs": "" },
+        "Chapter_2":  { "PDF": "", "MCQs": "" },
+        "Chapter_3":  { "PDF": "", "MCQs": "" },
+        "Chapter_4":  { "PDF": "", "MCQs": "" },
+        "Chapter_5":  { "PDF": "", "MCQs": "" },
+        "Chapter_6":  { "PDF": "", "MCQs": "" },
+        "Chapter_7":  { "PDF": "", "MCQs": "" },
+        "Chapter_8":  { "PDF": "", "MCQs": "" },
+        "Chapter_9":  { "PDF": "", "MCQs": "" },
+        "Chapter_10": { "PDF": "", "MCQs": "" },
+        "Chapter_11": { "PDF": "", "MCQs": "" },
+        "Chapter_12": { "PDF": "", "MCQs": "" },
+        "Chapter_13": { "PDF": "", "MCQs": "" },
+        "Chapter_14": { "PDF": "", "MCQs": "" },
+        "Chapter_15": { "PDF": "", "MCQs": "" }
+      },
+
+      "English_Grammar": {
+        "_subject_id": "english-grammar",
+        "_all_chapter_mcqs": "",
+        "Chapter_1":  { "PDF": "", "MCQs": "" },
+        "Chapter_2":  { "PDF": "", "MCQs": "" },
+        "Chapter_3":  { "PDF": "", "MCQs": "" },
+        "Chapter_4":  { "PDF": "", "MCQs": "" },
+        "Chapter_5":  { "PDF": "", "MCQs": "" },
+        "Chapter_6":  { "PDF": "", "MCQs": "" },
+        "Chapter_7":  { "PDF": "", "MCQs": "" },
+        "Chapter_8":  { "PDF": "", "MCQs": "" },
+        "Chapter_9":  { "PDF": "", "MCQs": "" },
+        "Chapter_10": { "PDF": "", "MCQs": "" }
+      },
+
+      "History": {
+        "_subject_id": "history",
+        "_all_chapter_mcqs": "",
+        "Chapter_1": { "PDF": "", "MCQs": "" },
+        "Chapter_2": { "PDF": "", "MCQs": "" },
+        "Chapter_3": { "PDF": "", "MCQs": "" },
+        "Chapter_4": { "PDF": "", "MCQs": "" },
+        "Chapter_5": { "PDF": "", "MCQs": "" },
+        "Chapter_6": { "PDF": "", "MCQs": "" },
+        "Chapter_7": { "PDF": "", "MCQs": "" },
+        "Chapter_8": { "PDF": "", "MCQs": "" }
+      },
+
+      "Geography": {
+        "_subject_id": "geography",
+        "_all_chapter_mcqs": "",
+        "Chapter_1":  { "PDF": "", "MCQs": "" },
+        "Chapter_2":  { "PDF": "", "MCQs": "" },
+        "Chapter_3":  { "PDF": "", "MCQs": "" },
+        "Chapter_4":  { "PDF": "", "MCQs": "" },
+        "Chapter_5":  { "PDF": "", "MCQs": "" },
+        "Chapter_6":  { "PDF": "", "MCQs": "" },
+        "Chapter_7":  { "PDF": "", "MCQs": "" },
+        "Chapter_8":  { "PDF": "", "MCQs": "" },
+        "Chapter_9":  { "PDF": "", "MCQs": "" },
+        "Chapter_10": { "PDF": "", "MCQs": "" },
+        "Chapter_11": { "PDF": "", "MCQs": "" },
+        "Chapter_12": { "PDF": "", "MCQs": "" },
+        "Chapter_13": { "PDF": "", "MCQs": "" },
+        "Chapter_14": { "PDF": "", "MCQs": "" },
+        "Chapter_15": { "PDF": "", "MCQs": "" },
+        "Chapter_16": { "PDF": "", "MCQs": "" },
+        "Chapter_17": { "PDF": "", "MCQs": "" },
+        "Chapter_18": { "PDF": "", "MCQs": "" },
+        "Chapter_19": { "PDF": "", "MCQs": "" }
+      },
+
+      "Odia_Literature": {
+        "_subject_id": "odia",
+        "_all_chapter_mcqs": "",
+        "Chapter_1":  { "PDF": "", "MCQs": "" },
+        "Chapter_2":  { "PDF": "", "MCQs": "" },
+        "Chapter_3":  { "PDF": "", "MCQs": "" },
+        "Chapter_4":  { "PDF": "", "MCQs": "" },
+        "Chapter_5":  { "PDF": "", "MCQs": "" },
+        "Chapter_6":  { "PDF": "", "MCQs": "" },
+        "Chapter_7":  { "PDF": "", "MCQs": "" },
+        "Chapter_8":  { "PDF": "", "MCQs": "" },
+        "Chapter_9":  { "PDF": "", "MCQs": "" },
+        "Chapter_10": { "PDF": "", "MCQs": "" },
+        "Chapter_11": { "PDF": "", "MCQs": "" },
+        "Chapter_12": { "PDF": "", "MCQs": "" },
+        "Chapter_13": { "PDF": "", "MCQs": "" },
+        "Chapter_14": { "PDF": "", "MCQs": "" },
+        "Chapter_15": { "PDF": "", "MCQs": "" },
+        "Chapter_16": { "PDF": "", "MCQs": "" },
+        "Chapter_17": { "PDF": "", "MCQs": "" },
+        "Chapter_18": { "PDF": "", "MCQs": "" }
+      },
+
+      "Odia_Grammar": {
+        "_subject_id": "odia-grammar",
+        "_all_chapter_mcqs": "",
+        "Chapter_1": { "PDF": "", "MCQs": "" },
+        "Chapter_2": { "PDF": "", "MCQs": "" },
+        "Chapter_3": { "PDF": "", "MCQs": "" },
+        "Chapter_4": { "PDF": "", "MCQs": "" },
+        "Chapter_5": { "PDF": "", "MCQs": "" },
+        "Chapter_6": { "PDF": "", "MCQs": "" },
+        "Chapter_7": { "PDF": "", "MCQs": "" }
+      }
+
+    },
+
+    "Third_Language": {
+
+      "Hindi_Literature": {
+        "_subject_id": "hindi",
+        "_all_chapter_mcqs": "",
+        "Chapter_1":  { "PDF": "", "MCQs": "" },
+        "Chapter_2":  { "PDF": "", "MCQs": "" },
+        "Chapter_3":  { "PDF": "", "MCQs": "" },
+        "Chapter_4":  { "PDF": "", "MCQs": "" },
+        "Chapter_5":  { "PDF": "", "MCQs": "" },
+        "Chapter_6":  { "PDF": "", "MCQs": "" },
+        "Chapter_7":  { "PDF": "", "MCQs": "" },
+        "Chapter_8":  { "PDF": "", "MCQs": "" },
+        "Chapter_9":  { "PDF": "", "MCQs": "" },
+        "Chapter_10": { "PDF": "", "MCQs": "" },
+        "Chapter_11": { "PDF": "", "MCQs": "" }
+      },
+
+      "Hindi_Grammar": {
+        "_subject_id": "hindi-grammar",
+        "_all_chapter_mcqs": "",
+        "Chapter_1":  { "PDF": "", "MCQs": "" },
+        "Chapter_2":  { "PDF": "", "MCQs": "" },
+        "Chapter_3":  { "PDF": "", "MCQs": "" },
+        "Chapter_4":  { "PDF": "", "MCQs": "" },
+        "Chapter_5":  { "PDF": "", "MCQs": "" },
+        "Chapter_6":  { "PDF": "", "MCQs": "" },
+        "Chapter_7":  { "PDF": "", "MCQs": "" },
+        "Chapter_8":  { "PDF": "", "MCQs": "" },
+        "Chapter_9":  { "PDF": "", "MCQs": "" },
+        "Chapter_10": { "PDF": "", "MCQs": "" },
+        "Chapter_11": { "PDF": "", "MCQs": "" },
+        "Chapter_12": { "PDF": "", "MCQs": "" }
+      },
+
+      "Sanskrit_Literature": {
+        "_subject_id": "sanskrit",
+        "_all_chapter_mcqs": "",
+        "Chapter_1":  { "PDF": "", "MCQs": "" },
+        "Chapter_2":  { "PDF": "", "MCQs": "" },
+        "Chapter_3":  { "PDF": "", "MCQs": "" },
+        "Chapter_4":  { "PDF": "", "MCQs": "" },
+        "Chapter_5":  { "PDF": "", "MCQs": "" },
+        "Chapter_6":  { "PDF": "", "MCQs": "" },
+        "Chapter_7":  { "PDF": "", "MCQs": "" },
+        "Chapter_8":  { "PDF": "", "MCQs": "" },
+        "Chapter_9":  { "PDF": "", "MCQs": "" },
+        "Chapter_10": { "PDF": "", "MCQs": "" },
+        "Chapter_11": { "PDF": "", "MCQs": "" },
+        "Chapter_12": { "PDF": "", "MCQs": "" },
+        "Chapter_13": { "PDF": "", "MCQs": "" },
+        "Chapter_14": { "PDF": "", "MCQs": "" },
+        "Chapter_15": { "PDF": "", "MCQs": "" },
+        "Chapter_16": { "PDF": "", "MCQs": "" }
+      },
+
+      "Sanskrit_Grammar": {
+        "_subject_id": "sanskrit-grammar",
+        "_all_chapter_mcqs": "",
+        "Chapter_1":  { "PDF": "", "MCQs": "" },
+        "Chapter_2":  { "PDF": "", "MCQs": "" },
+        "Chapter_3":  { "PDF": "", "MCQs": "" },
+        "Chapter_4":  { "PDF": "", "MCQs": "" },
+        "Chapter_5":  { "PDF": "", "MCQs": "" },
+        "Chapter_6":  { "PDF": "", "MCQs": "" },
+        "Chapter_7":  { "PDF": "", "MCQs": "" },
+        "Chapter_8":  { "PDF": "", "MCQs": "" },
+        "Chapter_9":  { "PDF": "", "MCQs": "" },
+        "Chapter_10": { "PDF": "", "MCQs": "" },
+        "Chapter_11": { "PDF": "", "MCQs": "" },
+        "Chapter_12": { "PDF": "", "MCQs": "" },
+        "Chapter_13": { "PDF": "", "MCQs": "" }
+      }
+
+    },
+
+    "Vocational": {
+
+      "Vocational_IT": {
+        "_subject_id": "vocational-it",
+        "_all_chapter_mcqs": "",
+        "Chapter_1": { "PDF": "", "MCQs": "" },
+        "Chapter_2": { "PDF": "", "MCQs": "" },
+        "Chapter_3": { "PDF": "", "MCQs": "" },
+        "Chapter_4": { "PDF": "", "MCQs": "" },
+        "Chapter_5": { "PDF": "", "MCQs": "" },
+        "Chapter_6": { "PDF": "", "MCQs": "" },
+        "Chapter_7": { "PDF": "", "MCQs": "" }
+      },
+
+      "Vocational_Retail": {
+        "_subject_id": "vocational-retail",
+        "_all_chapter_mcqs": "",
+        "Chapter_1": { "PDF": "", "MCQs": "" },
+        "Chapter_2": { "PDF": "", "MCQs": "" },
+        "Chapter_3": { "PDF": "", "MCQs": "" },
+        "Chapter_4": { "PDF": "", "MCQs": "" },
+        "Chapter_5": { "PDF": "", "MCQs": "" }
+      },
+
+      "Vocational_Automobile": {
+        "_subject_id": "vocational-automobile",
+        "_all_chapter_mcqs": "",
+        "Chapter_1": { "PDF": "", "MCQs": "" },
+        "Chapter_2": { "PDF": "", "MCQs": "" },
+        "Chapter_3": { "PDF": "", "MCQs": "" },
+        "Chapter_4": { "PDF": "", "MCQs": "" },
+        "Chapter_5": { "PDF": "", "MCQs": "" }
+      },
+
+      "Vocational_Tourism": {
+        "_subject_id": "vocational-tourism",
+        "_all_chapter_mcqs": "",
+        "Chapter_1": { "PDF": "", "MCQs": "" },
+        "Chapter_2": { "PDF": "", "MCQs": "" },
+        "Chapter_3": { "PDF": "", "MCQs": "" },
+        "Chapter_4": { "PDF": "", "MCQs": "" },
+        "Chapter_5": { "PDF": "", "MCQs": "" }
+      }
+
+    }
+  }
+}

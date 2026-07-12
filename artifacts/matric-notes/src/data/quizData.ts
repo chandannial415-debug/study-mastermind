@@ -14,11 +14,10 @@
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { fetchMcqsFromConfig } from './driveLoader';
 
-// ── Remote data source ────────────────────────────────────────────────────────
-// To update: Sheets → File → Share → Publish to web → CSV/JSON, or upload a
-// JSON file to Drive and set it to "Anyone with the link can view", then use:
-// https://drive.google.com/uc?export=download&id={FILE_ID}
+// ── Legacy global Drive URL (kept for backward compat — prefer drive-sources.json) ──
+// New MCQ links go into src/data/drive-sources.json, not here.
 const QUIZ_DRIVE_JSON_URL =
   'https://drive.google.com/uc?export=download&id=REPLACE_WITH_YOUR_DRIVE_FILE_ID';
 
@@ -586,14 +585,16 @@ type CachedBank = {
  * Questions are cached for 24 hours to reduce Drive traffic.
  */
 export async function fetchQuizQuestions(subjectId: string): Promise<QuizQuestion[]> {
-  // Always return local questions for the requested subject
-  // (Drive fetch enriches the full bank; for now always use local)
   const localQuestions = LOCAL_QUIZ_BANK.filter((q) => q.subjectId === subjectId);
 
-  // Try Drive refresh in background (fire-and-forget for first load)
+  // 1. Check per-subject Drive URLs from drive-sources.json (highest priority)
+  const configQuestions = await fetchMcqsFromConfig(subjectId);
+  if (configQuestions.length > 0) return configQuestions;
+
+  // 2. Try legacy global Drive bank (fire-and-forget refresh)
   _tryRefreshFromDrive().catch(() => {});
 
-  // Return local if nothing from Drive yet
+  // Check legacy cache
   try {
     const raw = await AsyncStorage.getItem(QUIZ_CACHE_KEY);
     if (raw) {
@@ -608,6 +609,7 @@ export async function fetchQuizQuestions(subjectId: string): Promise<QuizQuestio
     // ignore cache errors
   }
 
+  // 3. Local built-in bank
   return localQuestions.length > 0 ? localQuestions : LOCAL_QUIZ_BANK.slice(0, 5);
 }
 
