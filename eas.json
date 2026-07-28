@@ -14,9 +14,7 @@
       }
     },
     "production": {
-      "pnpm": {
-        "frozenLockfile": false
-      },
+      "pnpm": "false",
       "android": {
         "buildType": "apk"
       }
