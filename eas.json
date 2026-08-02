@@ -5,29 +5,19 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal",
-      "node": "20.19.4",
-      "env": {
-        "NPM_CONFIG_LEGACY_PEER_DEPS": "true"
-      }
+      "distribution": "internal"
     },
     "preview": {
       "distribution": "internal",
-      "node": "20.19.4",
       "android": {
         "buildType": "apk",
         "gradleCommand": ":app:assembleRelease --no-daemon"
       },
       "env": {
         "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
-        "GRADLE_OPTS": "-Xmx4096m -XX:MaxMetaspaceSize=1024m"
+        "GRADLE_OPTS": "-Dorg.gradle.jvmargs=\"-Xmx2048m -XX:MaxMetaspaceSize=512m\" -Dorg.gradle.daemon=false"
       }
     },
-    "production": {
-      "node": "20.19.4",
-      "env": {
-        "NPM_CONFIG_LEGACY_PEER_DEPS": "true"
-      }
-    }
+    "production": {}
   }
 }
