@@ -14,8 +14,13 @@
     "preview": {
       "distribution": "internal",
       "node": "20.19.4",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease --no-daemon"
+      },
       "env": {
-        "NPM_CONFIG_LEGACY_PEER_DEPS": "true"
+        "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
+        "GRADLE_OPTS": "-Xmx4096m -XX:MaxMetaspaceSize=1024m"
       }
     },
     "production": {
