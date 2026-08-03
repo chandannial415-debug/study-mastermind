@@ -15,6 +15,7 @@
       },
       "env": {
         "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
+        "YARN_CONFIG_IGNORE_ENGINES": "true",
         "GRADLE_OPTS": "-Dorg.gradle.jvmargs=\"-Xmx2048m -XX:MaxMetaspaceSize=512m\" -Dorg.gradle.daemon=false"
       }
     },
