@@ -1,50 +1,44 @@
 name: Build Android APK
 
 on:
-  push:
-    branches: [ main, master ]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 18
+          cache: 'npm'
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 9
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
+      - name: Setup Java JDK
+        uses: actions/setup-java@v3
         with:
           distribution: 'zulu'
           java-version: '17'
 
-      - name: Install Dependencies
-        run: pnpm install --no-frozen-lockfile
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v2
 
-      - name: Install Expo CLI Globally & Prebuild
+      - name: Build Android APK with Expo Prebuild
         run: |
-          pnpm add -g expo-cli
           npx expo prebuild --platform android
-
-      - name: Build Android Release APK
-        run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleRelease
+          ./gradlew assembleRelease --no-daemon
 
       - name: Upload APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
-          name: app-release-apk
+          name: app-release
           path: android/app/build/outputs/apk/release/app-release.apk
           
