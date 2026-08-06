@@ -8,18 +8,27 @@
       "distribution": "internal"
     },
     "preview": {
-      "node": "20.19.4",
       "distribution": "internal",
+      "channel": "preview",
       "android": {
         "buildType": "apk",
         "gradleCommand": ":app:assembleRelease --no-daemon"
       },
       "env": {
+        "NODE_VERSION": "20.19.4",
         "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
         "YARN_CONFIG_IGNORE_ENGINES": "true",
         "GRADLE_OPTS": "-Dorg.gradle.jvmargs=\"-Xmx2048m -XX:MaxMetaspaceSize=512m\" -Dorg.gradle.daemon=false"
       }
     },
-    "production": {}
+    "production": {
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "NODE_VERSION": "20.19.4",
+        "YARN_CONFIG_IGNORE_ENGINES": "true"
+      }
+    }
   }
 }
