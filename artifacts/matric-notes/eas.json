@@ -1,0 +1,34 @@
+{
+  "cli": {
+    "version": ">= 10.0.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "channel": "preview",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease --no-daemon"
+      },
+      "env": {
+        "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
+        "YARN_CONFIG_IGNORE_ENGINES": "true",
+        "GRADLE_OPTS": "-Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=\"-Xmx1024m -XX:MaxMetaspaceSize=256m\""
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease --no-daemon"
+      },
+      "env": {
+        "YARN_CONFIG_IGNORE_ENGINES": "true",
+        "GRADLE_OPTS": "-Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=\"-Xmx1024m -XX:MaxMetaspaceSize=256m\""
+      }
+    }
+  }
+}
