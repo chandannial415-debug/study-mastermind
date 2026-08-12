@@ -1,28 +1,15 @@
 /**
  * Study Mindset — Quiz Question Bank
  * ────────────────────────────────────────────────────────────────────
- * Questions are fetched dynamically from a Google Drive JSON file.
+ * Questions are fetched dynamically from Supabase.
  * Falls back to the built-in LOCAL_QUIZ_BANK when offline or fetch fails.
- *
- * Drive JSON schema:
- * {
- *   "version": "1.0",
- *   "questions": QuizQuestion[]
- * }
- *
- * Replace QUIZ_DRIVE_JSON_URL with your published Google Drive JSON file URL.
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { fetchMcqsFromConfig } from './driveLoader';
+import { supabase } from '../lib/supabase'; // Adjust path if your supabase client is located elsewhere
 
-// ── Legacy global Drive URL (kept for backward compat — prefer drive-sources.json) ──
-// New MCQ links go into src/data/drive-sources.json, not here.
-const QUIZ_DRIVE_JSON_URL =
-  'https://drive.google.com/uc?export=download&id=REPLACE_WITH_YOUR_DRIVE_FILE_ID';
-
-const QUIZ_CACHE_KEY   = '@matric_notes_quiz_bank_v1';
-const CACHE_TTL_MS     = 24 * 60 * 60 * 1000; // 24 hours
+const QUIZ_CACHE_KEY = '@matric_notes_quiz_bank_v1';
+const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 export type QuizQuestion = {
@@ -573,80 +560,61 @@ export const LOCAL_QUIZ_BANK: QuizQuestion[] = [
   },
 ];
 
-// ── Remote fetch with caching ─────────────────────────────────────────────────
+// ── Remote fetch from Supabase with caching ─────────────────────────────────
 type CachedBank = {
   timestamp: number;
   questions: QuizQuestion[];
 };
 
 /**
- * Attempts to fetch the latest question bank from Google Drive.
- * Falls back to the local bank on any error or if the cache is fresh.
- * Questions are cached for 24 hours to reduce Drive traffic.
+ * Attempts to fetch quiz questions from Supabase for a given subject.
+ * Falls back to local bank on error or offline usage.
  */
 export async function fetchQuizQuestions(subjectId: string): Promise<QuizQuestion[]> {
   const localQuestions = LOCAL_QUIZ_BANK.filter((q) => q.subjectId === subjectId);
 
-  // 1. Check per-subject Drive URLs from drive-sources.json (highest priority)
-  const configQuestions = await fetchMcqsFromConfig(subjectId);
-  if (configQuestions.length > 0) return configQuestions;
-
-  // 2. Try legacy global Drive bank (fire-and-forget refresh)
-  _tryRefreshFromDrive().catch(() => {});
-
-  // Check legacy cache
   try {
-    const raw = await AsyncStorage.getItem(QUIZ_CACHE_KEY);
+    const { data, error } = await supabase
+      .from('quiz_questions')
+      .select('*')
+      .eq('subject_id', subjectId);
+
+    if (!error && data && data.length > 0) {
+      const formattedQuestions: QuizQuestion[] = data.map((q: any) => ({
+        id: q.id,
+        subjectId: q.subject_id,
+        chapterId: q.chapter_id ?? undefined,
+        question: q.question,
+        options: q.options,
+        correctIndex: q.correct_index,
+        explanation: q.explanation ?? undefined,
+      }));
+
+      // Cache the remote questions locally
+      const cached: CachedBank = { timestamp: Date.now(), questions: formattedQuestions };
+      await AsyncStorage.setItem(`${QUIZ_CACHE_KEY}_${subjectId}`, JSON.stringify(cached));
+
+      return formattedQuestions;
+    }
+  } catch (e) {
+    // Fail silently and fall back to local/cached data
+  }
+
+  // Fallback to cache if available
+  try {
+    const raw = await AsyncStorage.getItem(`${QUIZ_CACHE_KEY}_${subjectId}`);
     if (raw) {
       const cached: CachedBank = JSON.parse(raw);
-      const age = Date.now() - cached.timestamp;
-      if (age < CACHE_TTL_MS && cached.questions.length > 0) {
-        const remote = cached.questions.filter((q) => q.subjectId === subjectId);
-        if (remote.length > 0) return remote;
+      if (Date.now() - cached.timestamp < CACHE_TTL_MS && cached.questions.length > 0) {
+        return cached.questions;
       }
     }
   } catch {
-    // ignore cache errors
+    // Ignore cache error
   }
 
-  // 3. Local built-in bank
+  // Fallback to local hardcoded bank
   return localQuestions.length > 0 ? localQuestions : LOCAL_QUIZ_BANK.slice(0, 5);
-}
-
-async function _tryRefreshFromDrive(): Promise<void> {
-  // Skip if URL is still the placeholder
-  if (QUIZ_DRIVE_JSON_URL.includes('REPLACE_WITH')) return;
-
-  try {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 8000);
-    const res = await fetch(QUIZ_DRIVE_JSON_URL, { signal: controller.signal });
-    clearTimeout(timeout);
-
-    if (!res.ok) return;
-    const data = await res.json();
-    if (!Array.isArray(data?.questions)) return;
-
-    // Validate each question shape before trusting remote data
-    const valid: QuizQuestion[] = data.questions.filter(
-      (q: any) =>
-        typeof q.id === 'string' &&
-        typeof q.subjectId === 'string' &&
-        typeof q.question === 'string' &&
-        Array.isArray(q.options) &&
-        q.options.length === 4 &&
-        q.options.every((o: any) => typeof o === 'string') &&
-        typeof q.correctIndex === 'number' &&
-        q.correctIndex >= 0 &&
-        q.correctIndex <= 3,
-    );
-    if (valid.length === 0) return;
-
-    const cached: CachedBank = { timestamp: Date.now(), questions: valid };
-    await AsyncStorage.setItem(QUIZ_CACHE_KEY, JSON.stringify(cached));
-  } catch {
-    // silently ignore — local bank is always available
-  }
 }
 
 /** Returns all subjects that have at least one question in the local bank */
@@ -656,20 +624,39 @@ export function getQuizSubjectIds(): string[] {
 
 /**
  * Fetches questions scoped to a specific chapter.
- * If chapter-specific questions exist, only those are returned.
- * Otherwise falls back to the full subject-level bank (existing behaviour),
- * so every chapter's MCQ/Gaming folder always has something to practice.
  */
 export async function fetchQuizQuestionsForChapter(
   chapterId: string,
   subjectId: string,
 ): Promise<QuizQuestion[]> {
+  try {
+    const { data, error } = await supabase
+      .from('quiz_questions')
+      .select('*')
+      .eq('subject_id', subjectId)
+      .eq('chapter_id', chapterId);
+
+    if (!error && data && data.length > 0) {
+      return data.map((q: any) => ({
+        id: q.id,
+        subjectId: q.subject_id,
+        chapterId: q.chapter_id ?? undefined,
+        question: q.question,
+        options: q.options,
+        correctIndex: q.correct_index,
+        explanation: q.explanation ?? undefined,
+      }));
+    }
+  } catch {
+    // Ignore error
+  }
+
   const subjectQuestions = await fetchQuizQuestions(subjectId);
   const chapterQuestions = subjectQuestions.filter((q) => q.chapterId === chapterId);
   return chapterQuestions.length > 0 ? chapterQuestions : subjectQuestions;
 }
 
-/** Returns true if a chapter has at least one chapter-specific question authored. */
+/** Returns true if a chapter has at least one chapter-specific question authored locally. */
 export function hasChapterQuestions(chapterId: string): boolean {
   return LOCAL_QUIZ_BANK.some((q) => q.chapterId === chapterId);
 }
