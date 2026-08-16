@@ -263,9 +263,11 @@
       { "id": "eng-gr-10", "name": "Unit 10: Paragraph and Essay Writing",         "subjectId": "english-grammar", "pdfUrl": "placeholder://eng-gr-ch10.pdf" }
     ],
     "history": [
-      { "id": "hist-1", "name": "Chapter 1: The Rise of Nationalism in Europe",    "subjectId": "history", "pdfUrl": "placeholder://hist-ch1.pdf" },
-      { "id": "hist-2", "name": "Chapter 2: Nationalism in India",                 "subjectId": "history", "pdfUrl": "placeholder://hist-ch2.pdf" },
-      { "id": "hist-3", "name": "Chapter 3: The Making of a Global World",         "subjectId": "history", "pdfUrl": "placeholder://hist-ch3.pdf" },
+      { "id": "hist-1", "name": "ଭାରତୀୟ ଜାତୀୟ ଆନ୍ଦୋଳନ
+        ",    "subjectId": "history", "pdfUrl": "placeholder://hist-ch1.pdf" },
+      { "id": "hist-2", "name": "ସ୍ବତନ୍ତ୍ର ଓଡିଶା ପ୍ରଦେଶ ଗଠନ",                 "subjectId": "history", "pdfUrl": "placeholder://hist-ch2.pdf" },
+      { "id": "hist-3", "name": " ୨୦୦୦ ପର୍ଯ୍ୟନ୍ତ ସ୍ବାଧୀନତା  ପରବର୍ତ୍ତୀ ଭାରତ
+        ",         "subjectId": "history", "pdfUrl": "placeholder://hist-ch3.pdf" },
       { "id": "hist-4", "name": "Chapter 4: The Age of Industrialisation",         "subjectId": "history", "pdfUrl": "placeholder://hist-ch4.pdf" },
       { "id": "hist-5", "name": "Chapter 5: Print Culture and the Modern World",   "subjectId": "history", "pdfUrl": "placeholder://hist-ch5.pdf" },
       { "id": "hist-6", "name": "Chapter 6: Rise of Communism — Russian Revolution","subjectId": "history", "pdfUrl": "placeholder://hist-ch6.pdf" },
