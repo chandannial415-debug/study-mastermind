@@ -1,67 +1,25 @@
-/**
- * Study Mindset — Curriculum Data Layer
- * ─────────────────────────────────────
- * This file is the single source of truth for all navigation data.
- * Raw data lives in syllabus.json (BSE Odisha Class 10, strictly no Class 9).
- * This module re-exports typed constants and helper functions consumed by screens.
- */
-
-import syllabusJson from './syllabus.json';
-
-// ── Exported types ────────────────────────────────────────────────────────────
-
-export type Category = {
-  id: string;
-  name: string;
-  subtitle: string;
-  iconName: string;
-  color: string;
-  lightBg: string;
-};
-
-export type Subject = {
-  id: string;
-  name: string;
-  iconName: string;
-  categoryId: string;
-  totalChapters: number;
-};
+// 1. Supabase का कनेक्शन इम्पोर्ट करें
+import { supabase } from './supabase'; 
 
 export type Chapter = {
-  id: string;
-  name: string;
-  subjectId: string;
-  pdfUrl: string;
+  id: number;
+  title: string;
+  subject: string;
+  pdf_url: string;
+  is_premium: boolean;
 };
 
-// ── Typed constants derived from syllabus.json ────────────────────────────────
+// 2. Supabase से डेटा लाने वाला नया फंक्शन
+export async function getChaptersBySubject(subjectName: string): Promise<Chapter[]> {
+  const { data, error } = await supabase
+    .from('notes')
+    .select('*')
+    .eq('subject', subjectName); 
 
-export const CATEGORIES: Category[] = syllabusJson.categories as Category[];
+  if (error) {
+    console.error("Supabase से डेटा लाने में गलती हुई:", error);
+    return []; // अगर कोई गलती हो, तो खाली लिस्ट भेजें
+  }
 
-export const SUBJECTS: Subject[] = syllabusJson.subjects as Subject[];
-
-export const CHAPTERS: Record<string, Chapter[]> =
-  syllabusJson.chapters as Record<string, Chapter[]>;
-
-// ── Helper functions ──────────────────────────────────────────────────────────
-
-export function getSubjectsByCategory(categoryId: string): Subject[] {
-  return SUBJECTS.filter((s) => s.categoryId === categoryId);
-}
-
-export function getChaptersBySubject(subjectId: string): Chapter[] {
-  return CHAPTERS[subjectId] ?? [];
-}
-
-export function getCategoryById(id: string): Category | undefined {
-  return CATEGORIES.find((c) => c.id === id);
-}
-
-export function getSubjectById(id: string): Subject | undefined {
-  return SUBJECTS.find((s) => s.id === id);
-}
-
-/** Total chapter count across all subjects */
-export function getTotalChapterCount(): number {
-  return SUBJECTS.reduce((acc, s) => acc + s.totalChapters, 0);
+  return data as Chapter[];
 }
