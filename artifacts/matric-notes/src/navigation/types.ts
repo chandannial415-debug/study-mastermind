@@ -4,6 +4,9 @@
  */
 
 export type RootStackParamList = {
+  /** Login screen */
+  Login: undefined;
+
   /** Animated splash / entry screen */
   index: undefined;
 
