@@ -14,11 +14,16 @@ type ViewerParams     = RootStackParamList['viewer'];
 type NotesParams      = RootStackParamList['notes'];
 type PyqParams        = RootStackParamList['pyq'];
 type QuizParams       = RootStackParamList['quiz'];
+type LoginParams      = RootStackParamList['Login'];
 
 export function useAppRouter() {
   return {
     goHome() {
       router.replace('/home');
+    },
+
+    goToLogin() {
+      router.replace('/login');
     },
 
     goToSubjects(params: SubjectsParams) {
