@@ -100,20 +100,30 @@ export default function HomeScreen() {
     <View style={styles.root}>
       <StatusBar style="light" />
 
-      {/* ── Fixed Header ── */}
+            {/* ── Fixed Header ── */}
       <View style={[styles.header, { paddingTop: topPad + 8 }]}>
         <View>
           <Text style={styles.appName}>Matric Notes</Text>
           <Text style={styles.appSub}>BSE Odisha · Class 10</Text>
         </View>
-        <View style={[styles.onlineBadge, { backgroundColor: isOnline ? '#14532D' : '#431407' }]}>
-          <View style={[styles.onlineDot, { backgroundColor: isOnline ? '#4ADE80' : '#F87171' }]} />
-          <Text style={[styles.onlineText, { color: isOnline ? '#4ADE80' : '#F87171' }]}>
-            {isOnline ? 'Online' : 'Offline'}
-          </Text>
+
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+          {/* लॉगिन बटन */}
+          <Pressable 
+            onPress={() => nav.goToLogin()} 
+            style={{ padding: 8, backgroundColor: ACCENT_DIM, borderRadius: 8 }}
+          >
+            <Ionicons name="person-circle-outline" size={24} color={ACCENT} />
+          </Pressable>
+
+          <View style={[styles.onlineBadge, { backgroundColor: isOnline ? '#14532D' : '#431407' }]}>
+            <View style={[styles.onlineDot, { backgroundColor: isOnline ? '#4ADE80' : '#F87171' }]} />
+            <Text style={[styles.onlineText, { color: isOnline ? '#4ADE80' : '#F87171' }]}>
+              {isOnline ? 'Online' : 'Offline'}
+            </Text>
+          </View>
         </View>
       </View>
-
       {/* ── Scrollable body ── */}
       <ScrollView
         style={styles.scroll}
