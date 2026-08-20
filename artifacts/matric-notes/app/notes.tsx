@@ -1,20 +1,19 @@
   useEffect(() => {
     async function fetchNotes() {
       setLoading(true);
-      
-      // यह लाइन चेक करेगी कि क्या सच में डेटा मिल रहा है
+      // यहाँ हमने कॉलम के नाम आपके डेटाबेस के अनुसार सही कर दिए हैं
       const { data, error } = await supabase
         .from('notes')
-        .select('*') // 'content' की जगह '*' करें ताकि पूरा डेटा दिखे
-        .eq('subject_name', subjectName)
-        .eq('chapter_name', chapterName)
+        .select('*')
+        .eq('subject', subjectName)       // आपके डेटाबेस में 'subject' नाम है
+        .eq('chapter_name', chapterName)  // यह सही लग रहा है
         .eq('file_type', 'Small Notebook')
         .single();
 
       if (error) {
         console.log("Supabase Error:", error.message);
       } else {
-        console.log("Supabase Data:", data); // यहाँ डेटा दिखेगा
+        console.log("Supabase Data:", data);
         setNote(data);
       }
       setLoading(false);
