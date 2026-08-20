@@ -1,24 +1,20 @@
-// 1. Supabase का कनेक्शन इम्पोर्ट करें
-import { supabase } from './supabase'; 
-
-export type Chapter = {
-  id: number;
-  title: string;
-  subject: string;
-  pdf_url: string;
-  is_premium: boolean;
-};
-
-// 2. Supabase से डेटा लाने वाला नया फंक्शन
-export async function getChaptersBySubject(subjectName: string): Promise<Chapter[]> {
+// 2. Supabase से डेटा लाने वाला अपडेटेड फंक्शन
+export async function getChaptersBySubject(
+  subjectName: string, 
+  chapterName: string, 
+  fileType: string
+): Promise<Chapter[]> {
+  
   const { data, error } = await supabase
     .from('notes')
     .select('*')
-    .eq('subject', subjectName); 
+    .eq('subject', subjectName)      // विषय
+    .eq('chapter_name', chapterName) // नया कॉलम: चैप्टर का नाम
+    .eq('file_type', fileType);      // नया कॉलम: 'Small Notebook' या जो भी है
 
   if (error) {
     console.error("Supabase से डेटा लाने में गलती हुई:", error);
-    return []; // अगर कोई गलती हो, तो खाली लिस्ट भेजें
+    return []; 
   }
 
   return data as Chapter[];
