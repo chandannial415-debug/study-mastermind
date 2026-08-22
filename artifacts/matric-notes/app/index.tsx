@@ -154,13 +154,13 @@ const styles = StyleSheet.create({
   },
   appName: {
     fontSize: 34,
-    fontFamily: 'Inter_700Bold',
+    fontWeight: 'bold',
     color: '#FFFFFF',
     letterSpacing: 0.4,
   },
   tagline: {
     fontSize: 15,
-    fontFamily: 'Inter_400Regular',
+    fontWeight: '400',
     color: 'rgba(255,255,255,0.72)',
     textAlign: 'center',
     letterSpacing: 0.2,
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
   badgeText: {
     color: 'rgba(255,255,255,0.9)',
     fontSize: 13,
-    fontFamily: 'Inter_500Medium',
+    fontWeight: '500',
   },
   footer: {
     flexDirection: 'row',
@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
   footerText: {
     color: 'rgba(255,255,255,0.5)',
     fontSize: 12.5,
-    fontFamily: 'Inter_400Regular',
+    fontWeight: '400',
     letterSpacing: 0.5,
   },
 });
